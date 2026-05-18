@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NSPlus — Холодильные Камеры</title>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --white: #ffffff;
+    --off-white: #f8f9fb;
+    --light-gray: #f0f2f5;
+    --navy: #0d1b3e;
+    --blue: #1a4fce;
+    --blue-light: #3b72f0;
+    --blue-pale: #e8effd;
+    --accent-cyan: #00c2d4;
+    --purple: #3b2da8;
+    --text: #2d3340;
+    --text-light: #6b7488;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--text); overflow-x: hidden; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 52px; height: 72px;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .nav-logo img { height: 48px; width: auto; }
+  .nav-logo-text {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 18px; font-weight: 800;
+    color: var(--navy); letter-spacing: -0.4px;
+  }
+  .nav-logo-text span { color: var(--purple); }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a {
+    text-decoration: none; font-size: 13.5px; font-weight: 500;
+    color: var(--text-light); transition: color .2s;
+  }
+  .nav-links a:hover { color: var(--blue); }
+  .nav-cta {
+    background: var(--navy); color: white;
+    border: none; border-radius: 9px;
+    padding: 10px 24px; font-size: 13.5px; font-weight: 600;
+    cursor: pointer; transition: background .2s;
+    font-family: 'Inter', sans-serif; text-decoration: none;
+  }
+  .nav-cta:hover { background: var(--blue); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    background: var(--white);
+    display: grid; grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 100px 52px 60px;
+    gap: 60px;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; right: -80px; top: -100px;
+    width: 650px; height: 650px;
+    background: radial-gradient(circle, #e8effd 0%, rgba(232,239,253,0) 70%);
+    border-radius: 50%; z-index: 0;
+  }
+  .hero-content { position: relative; z-index: 2; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--blue-pale); border-radius: 100px;
+    padding: 6px 18px; margin-bottom: 28px;
+    font-size: 11.5px; font-weight: 700; color: var(--blue);
+    letter-spacing: 1px; text-transform: uppercase;
+  }
+  .hero-badge span {
+    width: 7px; height: 7px; background: var(--blue);
+    border-radius: 50%; animation: pulse 2s infinite;
+    flex-shrink: 0;
+  }
+  @keyframes pulse {
+    0%,100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(1.5); }
+  }
+  .hero h1 {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 50px; font-weight: 800; line-height: 1.1;
+    color: var(--navy); margin-bottom: 22px;
+    letter-spacing: -1.5px;
+  }
+  .hero h1 em { font-style: normal; color: var(--purple); }
+  .hero p {
+    font-size: 16.5px; line-height: 1.75;
+    color: var(--text-light); margin-bottom: 36px;
+  }
+  .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--navy); color: white;
+    border-radius: 10px; padding: 14px 30px;
+    font-size: 15px; font-weight: 600;
+    text-decoration: none; transition: all .25s;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-primary:hover { background: var(--blue); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(26,79,206,0.28); }
+  .btn-secondary {
+    background: transparent; color: var(--navy);
+    border: 2px solid #dde3ef; border-radius: 10px; padding: 13px 28px;
+    font-size: 15px; font-weight: 600; text-decoration: none; transition: all .25s;
+  }
+  .btn-secondary:hover { border-color: var(--blue); color: var(--blue); }
+  .hero-stats {
+    display: flex; gap: 36px; margin-top: 48px;
+    padding-top: 36px; border-top: 1px solid var(--light-gray);
+  }
+  .stat-num {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 26px; font-weight: 800; color: var(--navy);
+  }
+  .stat-label { font-size: 12px; color: var(--text-light); margin-top: 4px; line-height: 1.4; }
+
+  .hero-img {
+    position: relative; z-index: 2;
+    border-radius: 24px; overflow: hidden;
+    box-shadow: 0 40px 100px rgba(13,27,62,0.2);
+    animation: fadeUp 0.9s ease both;
+  }
+  .hero-img img {
+    width: 100%; height: 460px;
+    object-fit: cover; display: block;
+  }
+  .hero-img-badge {
+    position: absolute; bottom: 20px; left: 20px;
+    background: rgba(13,27,62,0.88); backdrop-filter: blur(8px);
+    color: white; border-radius: 12px; padding: 12px 18px;
+    font-size: 13px; font-weight: 600;
+  }
+  .hero-img-badge span { color: var(--accent-cyan); display: block; font-size: 11px; font-weight: 400; margin-top: 2px; }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* FEATURES BAR */
+  .features-bar {
+    background: var(--navy);
+    display: flex; overflow-x: auto;
+  }
+  .feat-item {
+    flex: 1; min-width: 190px;
+    padding: 28px 24px;
+    display: flex; align-items: center; gap: 14px;
+    border-right: 1px solid rgba(255,255,255,0.08);
+  }
+  .feat-item:last-child { border-right: none; }
+  .feat-ic {
+    width: 38px; height: 38px; flex-shrink: 0;
+    background: rgba(255,255,255,0.1); border-radius: 9px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 17px;
+  }
+  .feat-item strong { display: block; font-size: 13px; color: white; font-weight: 600; margin-bottom: 2px; }
+  .feat-item span { font-size: 11.5px; color: rgba(255,255,255,0.45); }
+
+  /* SECTIONS */
+  section { padding: 88px 52px; }
+  .sec-label {
+    font-size: 11px; font-weight: 700; letter-spacing: 2.5px;
+    text-transform: uppercase; color: var(--blue); margin-bottom: 12px;
+  }
+  .sec-title {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 32px; font-weight: 800;
+    color: var(--navy); line-height: 1.2;
+    letter-spacing: -0.7px; margin-bottom: 14px;
+  }
+  .sec-sub {
+    font-size: 16px; color: var(--text-light);
+    line-height: 1.7; max-width: 500px; margin-bottom: 48px;
+  }
+
+  /* PRODUCTS */
+  .products-bg { background: var(--off-white); }
+  .products-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+  .prod-card {
+    background: white; border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 2px 18px rgba(0,0,0,0.06);
+    transition: all .3s; cursor: pointer;
+    border: 1.5px solid transparent;
+  }
+  .prod-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 56px rgba(26,79,206,0.14);
+    border-color: var(--blue-light);
+  }
+  .prod-card-img {
+    height: 210px; overflow: hidden;
+    background: var(--light-gray);
+  }
+  .prod-card-img img {
+    width: 100%; height: 100%;
+    object-fit: cover; display: block;
+    transition: transform .4s;
+  }
+  .prod-card:hover .prod-card-img img { transform: scale(1.05); }
+  .prod-card-body { padding: 22px 24px 26px; }
+  .prod-tag {
+    font-size: 10px; font-weight: 700; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--blue);
+    background: var(--blue-pale); border-radius: 100px;
+    padding: 3px 10px; display: inline-block; margin-bottom: 10px;
+  }
+  .prod-card h3 {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 14.5px; font-weight: 700; color: var(--navy);
+    margin-bottom: 8px; line-height: 1.3;
+  }
+  .prod-card p { font-size: 13px; color: var(--text-light); line-height: 1.6; margin-bottom: 14px; }
+  .learn-more {
+    font-size: 13px; font-weight: 600; color: var(--blue);
+    text-decoration: none; display: inline-flex; align-items: center; gap: 6px;
+    transition: gap .2s;
+  }
+  .learn-more:hover { gap: 10px; }
+
+  /* FEATURED */
+  .prod-card.wide { grid-column: span 2; display: flex; }
+  .prod-card.wide .prod-card-img { width: 280px; height: auto; flex-shrink: 0; border-radius: 0; }
+  .prod-card.wide .prod-card-body { padding: 32px 36px; display: flex; flex-direction: column; justify-content: center; }
+  .prod-card.wide h3 { font-size: 20px; margin-bottom: 12px; }
+  .prod-card.wide p { font-size: 14.5px; margin-bottom: 20px; }
+
+  /* WHY */
+  .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .why-panel {
+    background: linear-gradient(135deg, var(--navy) 0%, #1a3580 100%);
+    border-radius: 22px; padding: 48px 40px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 3px;
+    overflow: hidden;
+  }
+  .why-box { background: rgba(255,255,255,0.07); padding: 28px 24px; }
+  .why-box:first-child { border-radius: 16px 2px 2px 2px; }
+  .why-box:nth-child(2) { border-radius: 2px 16px 2px 2px; }
+  .why-box:nth-child(3) { border-radius: 2px 2px 2px 16px; }
+  .why-box:last-child { border-radius: 2px 2px 16px 2px; }
+  .why-num {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 30px; font-weight: 800; color: white; line-height: 1;
+  }
+  .why-num em { font-style: normal; color: var(--accent-cyan); }
+  .why-desc { font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 8px; line-height: 1.4; }
+  .why-list { list-style: none; }
+  .why-list li {
+    display: flex; gap: 16px; padding: 20px 0;
+    border-bottom: 1px solid var(--light-gray);
+  }
+  .why-list li:last-child { border-bottom: none; }
+  .why-check {
+    width: 28px; height: 28px; flex-shrink: 0;
+    background: var(--blue-pale); border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--blue); font-size: 13px; font-weight: 700;
+  }
+  .why-list strong { display: block; font-size: 15px; color: var(--navy); margin-bottom: 3px; font-weight: 600; }
+  .why-list span { font-size: 13.5px; color: var(--text-light); line-height: 1.5; }
+
+  /* GALLERY */
+  .gallery-bg { background: white; }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 16px;
+  }
+  .gal-item {
+    border-radius: 14px; overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    position: relative;
+  }
+  .gal-item img {
+    width: 100%; height: 220px;
+    object-fit: cover; display: block;
+    transition: transform .4s;
+  }
+  .gal-item:hover img { transform: scale(1.05); }
+  .gal-item.tall img { height: 460px; }
+  .gal-item .gal-label {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(180deg, transparent, rgba(13,27,62,0.8));
+    color: white; padding: 16px 16px 14px;
+    font-size: 12.5px; font-weight: 600;
+    opacity: 0; transition: opacity .3s;
+  }
+  .gal-item:hover .gal-label { opacity: 1; }
+
+  /* CONTACT */
+  .contact-bg { background: var(--navy); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+  .contact-bg .sec-label { color: var(--accent-cyan); }
+  .contact-bg .sec-title { color: white; }
+  .contact-bg .sec-sub { color: rgba(255,255,255,0.5); }
+  .channels { display: flex; flex-direction: column; gap: 14px; }
+  .channel {
+    display: flex; align-items: center; gap: 16px;
+    background: rgba(255,255,255,0.07); border-radius: 12px;
+    padding: 18px 22px; text-decoration: none; transition: background .2s;
+  }
+  .channel:hover { background: rgba(255,255,255,0.13); }
+  .ch-ic {
+    width: 44px; height: 44px; border-radius: 11px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; flex-shrink: 0;
+  }
+  .ch-tg { background: #229ED9; }
+  .ch-ig { background: linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
+  .ch-ph { background: #25D366; }
+  .channel strong { display: block; font-size: 14px; font-weight: 600; color: white; margin-bottom: 2px; }
+  .channel span { font-size: 12.5px; color: rgba(255,255,255,0.5); }
+  .contact-form { background: white; border-radius: 22px; padding: 42px; }
+  .contact-form h3 {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 28px;
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+  .fg { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+  .fg label { font-size: 13px; font-weight: 600; color: var(--text); }
+  .fg input, .fg select, .fg textarea {
+    border: 1.5px solid #e2e6ef; border-radius: 10px;
+    padding: 12px 16px; font-size: 14px;
+    font-family: 'Inter', sans-serif; color: var(--text);
+    background: white; outline: none; transition: border .2s;
+  }
+  .fg input:focus, .fg select:focus, .fg textarea:focus { border-color: var(--blue); }
+  .fg textarea { resize: vertical; min-height: 96px; }
+  .form-submit {
+    width: 100%; background: var(--navy); color: white;
+    border: none; border-radius: 10px; padding: 14px;
+    font-size: 15px; font-weight: 600; cursor: pointer;
+    font-family: 'Inter', sans-serif; transition: background .2s;
+  }
+  .form-submit:hover { background: var(--blue); }
+
+  /* FOOTER */
+  footer {
+    background: #080e22;
+    padding: 36px 52px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .footer-logo { display: flex; align-items: center; gap: 10px; }
+  .footer-logo img { height: 36px; filter: brightness(0) invert(1); opacity: 0.8; }
+  .footer-logo span {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 17px; font-weight: 800; color: white;
+  }
+  .footer-copy { font-size: 12px; color: rgba(255,255,255,0.3); }
+  .footer-links { display: flex; gap: 22px; }
+  .footer-links a { font-size: 13px; color: rgba(255,255,255,0.4); text-decoration: none; transition: color .2s; }
+  .footer-links a:hover { color: white; }
+
+  /* SCROLL ANIM */
+  .fade { opacity: 0; transform: translateY(28px); transition: opacity .6s ease, transform .6s ease; }
+  .fade.on { opacity: 1; transform: none; }
+
+  @media(max-width:1024px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    .hero { grid-template-columns: 1fr; padding: 90px 20px 56px; }
+    .hero h1 { font-size: 34px; }
+    section { padding: 56px 20px; }
+    .products-grid { grid-template-columns: 1fr 1fr; }
+    .prod-card.wide { grid-column: span 2; flex-direction: column; }
+    .prod-card.wide .prod-card-img { width: 100%; height: 220px; }
+    .why-grid, .contact-grid { grid-template-columns: 1fr; }
+    .gallery-grid { grid-template-columns: 1fr 1fr; }
+    .gal-item.tall img { height: 220px; }
+    footer { flex-direction: column; gap: 16px; text-align: center; }
+    .hero-stats { flex-wrap: wrap; gap: 20px; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+  @media(max-width:600px) {
+    .products-grid { grid-template-columns: 1fr; }
+    .prod-card.wide { grid-column: span 1; }
+    .gallery-grid { grid-template-columns: 1fr; }
+    .features-bar { flex-direction: column; }
+    .feat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <img src="img/img0.jpg" alt="NSPlus Logo">
+    <span class="nav-logo-text">NS<span>Plus</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#products">Продукты</a></li>
+    <li><a href="#gallery">Галерея</a></li>
+    <li><a href="#why">О нас</a></li>
+    <li><a href="#contact">Контакты</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Получить КП</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge"><span></span>Производитель холодильных камер</div>
+    <h1>Холодильные<br><em>Камеры</em><br>NSPlus</h1>
+    <p>Модульные сборные конструкции для хранения охлаждённых и замороженных продуктов. Соответствие ГОСТ 23833-95. Работаем при −30…+40°С.</p>
+    <div class="hero-btns">
+      <a href="#products" class="btn-primary">Смотреть каталог →</a>
+      <a href="#contact" class="btn-secondary">Связаться с нами</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">80–100</div>
+        <div class="stat-label">мм толщина панелей</div>
+      </div>
+      <div>
+        <div class="stat-num">−30°С</div>
+        <div class="stat-label">минимальная температура</div>
+      </div>
+      <div>
+        <div class="stat-num">ГОСТ</div>
+        <div class="stat-label">23833-95 сертификат</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-img">
+    <img src="img/img1.png" alt="Холодильная камера стандартная">
+    <div class="hero-img-badge">
+      Стандартная сборка
+      <span>Готовое решение под ключ</span>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES BAR -->
+<div class="features-bar">
+  <div class="feat-item"><div class="feat-ic">🔒</div><div><strong>Соединение «шип-паз»</strong><span>Надёжная герметизация</span></div></div>
+  <div class="feat-item"><div class="feat-ic">⚡</div><div><strong>Быстрый монтаж</strong><span>Всё в комплекте поставки</span></div></div>
+  <div class="feat-item"><div class="feat-ic">📐</div><div><strong>Любые размеры</strong><span>Индивидуальные проекты</span></div></div>
+  <div class="feat-item"><div class="feat-ic">🌡️</div><div><strong>ПНП изоляция</strong><span>0,022 Вт/м²·К</span></div></div>
+  <div class="feat-item"><div class="feat-ic">🔧</div><div><strong>Расширение объёма</strong><span>Расширительные пояса</span></div></div>
+</div>
+
+<!-- PRODUCTS -->
+<section class="products-bg" id="products">
+  <div class="sec-label">Наши продукты</div>
+  <div class="sec-title">Линейка холодильных камер</div>
+  <div class="sec-sub">Готовые решения, индивидуальные проекты и камеры со стеклянными фронтами для любых задач торговли и хранения.</div>
+  <div class="products-grid fade">
+    <div class="prod-card wide">
+      <div class="prod-card-img">
+        <img src="img/img2.png" alt="Камера с перегородками">
+      </div>
+      <div class="prod-card-body">
+        <span class="prod-tag">Индивидуальные решения</span>
+        <h3>Камеры с перегородками и угловые</h3>
+        <p>Различные температурные зоны в одном объёме. Т-образные панели, комбинированные и угловые (135°) исполнения для любых планировок торговых залов.</p>
+        <a href="#contact" class="learn-more">Узнать подробнее →</a>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-card-img">
+        <img src="img/img3.png" alt="Стандартная камера">
+      </div>
+      <div class="prod-card-body">
+        <span class="prod-tag">Готовые решения</span>
+        <h3>Стандартная сборка</h3>
+        <p>Панели 80–100 мм, типовые размеры, распашной универсальный дверной блок. Быстро и надёжно.</p>
+        <a href="#contact" class="learn-more">Подробнее →</a>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-card-img">
+        <img src="img/img4.png" alt="Minicella камера">
+      </div>
+      <div class="prod-card-body">
+        <span class="prod-tag">Minicella</span>
+        <h3>Холодильная миникамера</h3>
+        <p>~1500 л объём при минимальной площади. Разборные шкафы для узких торговых помещений.</p>
+        <a href="#contact" class="learn-more">Подробнее →</a>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-card-img">
+        <img src="img/img5.png" alt="Стеклянный фронт продукты">
+      </div>
+      <div class="prod-card-body">
+        <span class="prod-tag">Стеклянный фронт</span>
+        <h3>Камеры для продуктов X5/X7</h3>
+        <p>Среднетемпературные серии. Режим −2…+12°С. Вертикальная подсветка, система против конденсата.</p>
+        <a href="#contact" class="learn-more">Подробнее →</a>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-card-img">
+        <img src="img/img6.png" alt="Стеклянный фронт заморозка">
+      </div>
+      <div class="prod-card-body">
+        <span class="prod-tag">Низкотемпературные</span>
+        <h3>Камеры глубокой заморозки X5L/X7L</h3>
+        <p>Режим −15…−23°С. Двухкамерный стеклопакет 40 мм, обогрев рамы и стекла.</p>
+        <a href="#contact" class="learn-more">Подробнее →</a>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-card-img">
+        <img src="img/img7.png" alt="Камера для цветов">
+      </div>
+      <div class="prod-card-body">
+        <span class="prod-tag">Для цветов и напитков</span>
+        <h3>Камеры с глухими стёклами</h3>
+        <p>Стеклянные модули с 1–4 сторон. Режим +2…+12°С. Идеально для цветочных магазинов.</p>
+        <a href="#contact" class="learn-more">Подробнее →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-bg" id="gallery">
+  <div class="sec-label">Фотогалерея</div>
+  <div class="sec-title">Наши камеры в деталях</div>
+  <div class="sec-sub">Реальные фотографии продукции из каталога NS.</div>
+  <div class="gallery-grid fade">
+    <div class="gal-item tall" style="grid-row: span 2;">
+      <img src="img/img8.png" alt="Камеры со стеклянными дверями" style="height:100%;object-fit:cover;">
+      <div class="gal-label">Стеклянный фронт — пустые полки</div>
+    </div>
+    <div class="gal-item">
+      <img src="img/img9.png" alt="Продукты питания">
+      <div class="gal-label">Хранение продуктов питания</div>
+    </div>
+    <div class="gal-item">
+      <img src="img/img10.png" alt="Замороженные продукты">
+      <div class="gal-label">Глубокая заморозка</div>
+    </div>
+    <div class="gal-item">
+      <img src="img/img11.png" alt="Камера для цветов">
+      <div class="gal-label">Цветочная камера</div>
+    </div>
+    <div class="gal-item">
+      <img src="img/img12.png" alt="Цветочная камера 2">
+      <div class="gal-label">Камера для цветов и напитков</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why">
+  <div class="why-grid">
+    <div class="why-panel fade">
+      <div class="why-box">
+        <div class="why-num">80<em>+</em></div>
+        <div class="why-desc">мм минимальная толщина панелей</div>
+      </div>
+      <div class="why-box">
+        <div class="why-num">−30<em>°</em></div>
+        <div class="why-desc">минимальная рабочая температура</div>
+      </div>
+      <div class="why-box">
+        <div class="why-num">1500</div>
+        <div class="why-desc">кгс/м² нагрузка на пол</div>
+      </div>
+      <div class="why-box">
+        <div class="why-num">42<em>–48</em></div>
+        <div class="why-desc">кг/м³ плотность заливки ПНП</div>
+      </div>
+    </div>
+    <div>
+      <div class="sec-label">Почему NSPlus</div>
+      <div class="sec-title">Качество в каждой детали</div>
+      <ul class="why-list fade">
+        <li><div class="why-check">✓</div><div><strong>ГОСТ 23833-95</strong><span>Все камеры сертифицированы и соответствуют стандарту «Оборудование холодильное торговое»</span></div></li>
+        <li><div class="why-check">✓</div><div><strong>Полный комплект для монтажа</strong><span>Герметик, уплотнители, крепёж, пороговая накладка — всё включено в поставку</span></div></li>
+        <li><div class="why-check">✓</div><div><strong>Многослойная защита панелей</strong><span>Стальной лист → пассивирующий слой → грунт → покрытие → полиэтилен</span></div></li>
+        <li><div class="why-check">✓</div><div><strong>Конструктор камер</strong><span>Программа для быстрого расчёта индивидуальных камер, комплектации и цены</span></div></li>
+        <li><div class="why-check">✓</div><div><strong>Расширение камер</strong><span>Расширительные пояса позволяют увеличить объём уже работающих камер</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-bg" id="contact">
+  <div class="contact-grid">
+    <div>
+      <div class="sec-label">Связаться с нами</div>
+      <div class="sec-title">Получите коммерческое предложение</div>
+      <div class="sec-sub">Оставьте заявку или свяжитесь любым удобным способом — ответим в течение часа.</div>
+      <div class="channels">
+        <a href="https://t.me/nsplus_uz" class="channel" target="_blank">
+          <div class="ch-ic ch-tg">✈️</div>
+          <div><strong>Telegram</strong><span>@nsplus_uz</span></div>
+        </a>
+        <a href="https://instagram.com/nsplus.uz" class="channel" target="_blank">
+          <div class="ch-ic ch-ig">📸</div>
+          <div><strong>Instagram</strong><span>@nsplus.uz</span></div>
+        </a>
+        <a href="tel:+998901234567" class="channel">
+          <div class="ch-ic ch-ph">📞</div>
+          <div><strong>Телефон</strong><span>+998 90 123 45 67</span></div>
+        </a>
+      </div>
+    </div>
+    <div class="contact-form">
+      <h3>Оставить заявку</h3>
+      <div class="form-row">
+        <div class="fg"><label>Имя</label><input type="text" placeholder="Ваше имя"></div>
+        <div class="fg"><label>Телефон</label><input type="tel" placeholder="+998 __ ___ __ __"></div>
+      </div>
+      <div class="fg">
+        <label>Тип камеры</label>
+        <select>
+          <option value="">Выберите категорию</option>
+          <option>Стандартная сборка</option>
+          <option>Minicella миникамера</option>
+          <option>Со стеклянным фронтом (продукты)</option>
+          <option>Глубокая заморозка X5L/X7L</option>
+          <option>Угловая или с перегородками</option>
+          <option>Камера для цветов</option>
+          <option>Индивидуальный проект</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label>Комментарий</label>
+        <textarea placeholder="Опишите требования: размеры, температурный режим, количество дверей..."></textarea>
+      </div>
+      <button class="form-submit" onclick="alert('Спасибо! Мы свяжемся с вами в ближайшее время.')">Отправить заявку</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <img src="img/img13.jpg" alt="NSPlus">
+    <span>NSPlus</span>
+  </div>
+  <div class="footer-copy">© 2025 NSPlus. Холодильные камеры.</div>
+  <div class="footer-links">
+    <a href="#products">Продукты</a>
+    <a href="#gallery">Галерея</a>
+    <a href="#contact">Контакты</a>
+  </div>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('on'); });
+  }, {threshold: 0.1});
+  document.querySelectorAll('.fade').forEach(el => obs.observe(el));
+</script>
+
+
+
+<!-- СПЕЦТЕХНИКА -->
+<section id="spets" style="background:#f8f9fb; padding: 80px 52px;">
+  <div style="font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#1a4fce;margin-bottom:12px;">Спецтехника</div>
+  <div style="font-family:'Unbounded',sans-serif;font-size:32px;font-weight:800;color:#0d1b3e;letter-spacing:-0.7px;margin-bottom:14px;line-height:1.2;">Прицепы и полевые кухни</div>
+  <div style="font-size:16px;color:#6b7488;line-height:1.7;max-width:600px;margin-bottom:40px;">Специализированная техника для перевозки жидкостей и организации питания в полевых условиях.</div>
+
+  <!-- SWIPER WRAPPER -->
+  <div class="spets-slider-wrap">
+    <div class="spets-slider" id="spetsSlider">
+
+      <!-- Карточка 1 -->
+      <div class="spets-card">
+        <div class="spets-card-img">
+          <img src="img/img14.png" alt="Цистерна ЦВ-1.2">
+        </div>
+        <div class="spets-card-body">
+          <span class="spets-tag">Прицеп-цистерна</span>
+          <h3>Цистерна прицепная ЦВ-1.2</h3>
+          <p>Прицеп-цистерна для перевозки питьевой и промышленной воды. Нержавеющая сталь AISI 304, волнорез, шаровый кран Ду-40. Эксплуатация до 70 км/ч, включая полевые дороги.</p>
+          <div class="spets-stats">
+            <div class="spets-stat"><span>1200 л</span><small>Объём</small></div>
+            <div class="spets-stat"><span>1330 кг</span><small>Сухая масса</small></div>
+            <div class="spets-stat"><span>70 км/ч</span><small>Макс. скорость</small></div>
+            <div class="spets-stat"><span>3880 мм</span><small>Длина</small></div>
+          </div>
+          <a href="#contact" class="spets-link">Узнать подробнее →</a>
+        </div>
+      </div>
+
+      <!-- Карточка 2 -->
+      <div class="spets-card">
+        <div class="spets-card-img">
+          <img src="img/img15.png" alt="Полевая кухня КП-130">
+        </div>
+        <div class="spets-card-body">
+          <span class="spets-tag">Полевая кухня</span>
+          <h3>Полевая кухня КП-130</h3>
+          <p>Мобильная кухня на 130 человек. 4 варочных съёмных котла, духовой шкаф. Топливо: дизель, дрова, уголь. Применяется в экспедициях, лагерях, на городских мероприятиях.</p>
+          <div class="spets-stats">
+            <div class="spets-stat"><span>130 чел</span><small>Расчёт</small></div>
+            <div class="spets-stat"><span>4 котла</span><small>Варочные</small></div>
+            <div class="spets-stat"><span>80 л</span><small>Котёл (1-е)</small></div>
+            <div class="spets-stat"><span>1330 кг</span><small>Масса</small></div>
+          </div>
+          <a href="#contact" class="spets-link">Узнать подробнее →</a>
+        </div>
+      </div>
+
+      <!-- Карточка 3 -->
+      <div class="spets-card">
+        <div class="spets-card-img">
+          <img src="img/img16.png" alt="Цистерна 10500л">
+        </div>
+        <div class="spets-card-body">
+          <span class="spets-tag">Полуприцеп-цистерна</span>
+          <h3>Цистерна пищевая 10 500 л</h3>
+          <p>Полуприцеп на шасси ЯДИШ ВМ-ПЦ. 3 секции из нержавеющей стали AISI-304. Пневмоподвеска BPW, ABS WABCO. Теплоизоляция ±2°С за 10 часов при ΔT=30°С.</p>
+          <div class="spets-stats">
+            <div class="spets-stat"><span>10 500 л</span><small>Объём</small></div>
+            <div class="spets-stat"><span>3 секции</span><small>Количество</small></div>
+            <div class="spets-stat"><span>12 000 мм</span><small>Длина</small></div>
+            <div class="spets-stat"><span>AISI-304</span><small>Материал</small></div>
+          </div>
+          <a href="#contact" class="spets-link">Узнать подробнее →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Dots -->
+    <div class="spets-dots" id="spetsDots">
+      <button class="spets-dot active" onclick="goSlide(0)"></button>
+      <button class="spets-dot" onclick="goSlide(1)"></button>
+      <button class="spets-dot" onclick="goSlide(2)"></button>
+    </div>
+  </div>
+</section>
+
+<style>
+.spets-slider-wrap {
+  position: relative;
+  overflow: hidden;
+}
+.spets-slider {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  transition: none;
+}
+.spets-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 18px rgba(0,0,0,0.07);
+  border: 1.5px solid transparent;
+  transition: transform .3s, box-shadow .3s, border-color .3s;
+  flex-shrink: 0;
+}
+.spets-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 56px rgba(26,79,206,0.13);
+  border-color: #3b72f0;
+}
+.spets-card-img {
+  height: 220px;
+  overflow: hidden;
+  background: #e8effd;
+}
+.spets-card-img img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  transition: transform .4s;
+}
+.spets-card:hover .spets-card-img img { transform: scale(1.05); }
+.spets-card-body { padding: 24px 26px 28px; }
+.spets-tag {
+  font-size: 10px; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; color: #1a4fce;
+  background: #e8effd; border-radius: 100px;
+  padding: 3px 10px; display: inline-block; margin-bottom: 10px;
+}
+.spets-card h3 {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 15px; font-weight: 700; color: #0d1b3e;
+  margin-bottom: 10px; line-height: 1.3;
+}
+.spets-card p {
+  font-size: 13px; color: #6b7488;
+  line-height: 1.65; margin-bottom: 18px;
+}
+.spets-stats {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 8px; margin-bottom: 18px;
+}
+.spets-stat {
+  background: #f0f2f5; border-radius: 8px; padding: 10px 12px;
+}
+.spets-stat span {
+  display: block;
+  font-family: 'Unbounded', sans-serif;
+  font-size: 14px; font-weight: 800; color: #0d1b3e;
+}
+.spets-stat small {
+  font-size: 11px; color: #6b7488; margin-top: 2px; display: block;
+}
+.spets-link {
+  font-size: 13px; font-weight: 600; color: #1a4fce;
+  text-decoration: none; display: inline-flex; align-items: center; gap: 6px;
+}
+.spets-link:hover { gap: 10px; }
+
+/* Dots - hidden on desktop */
+.spets-dots {
+  display: none;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+.spets-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #dde3ef; border: none; cursor: pointer;
+  padding: 0; transition: all .25s;
+}
+.spets-dot.active {
+  background: #1a4fce; width: 24px; border-radius: 4px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  #spets { padding: 56px 0 56px; }
+  #spets > div:not(.spets-slider-wrap) {
+    padding: 0 20px;
+  }
+  .spets-slider-wrap { overflow: hidden; }
+  .spets-slider {
+    display: flex;
+    gap: 0;
+    transition: transform .4s cubic-bezier(.4,0,.2,1);
+    will-change: transform;
+    grid-template-columns: none;
+  }
+  .spets-card {
+    min-width: 85vw;
+    max-width: 85vw;
+    margin: 0 7.5vw 0 0;
+    border-radius: 16px;
+  }
+  .spets-card:first-child { margin-left: 20px; }
+  .spets-card:last-child { margin-right: 20px; }
+  .spets-dots { display: flex; }
+}
+</style>
+
+<script>
+(function() {
+  let current = 0;
+  const slider = document.getElementById('spetsSlider');
+  const dots = document.querySelectorAll('.spets-dot');
+  const cards = slider ? slider.querySelectorAll('.spets-card') : [];
+
+  function isMobile() { return window.innerWidth <= 768; }
+
+  function updateDots(idx) {
+    dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+  }
+
+  window.goSlide = function(idx) {
+    if (!isMobile()) return;
+    current = idx;
+    const cardW = cards[0] ? cards[0].offsetWidth : 0;
+    const marginR = cardW * 0.075; // 7.5vw gap approx
+    const offset = idx * (cardW + 20);
+    slider.style.transform = `translateX(calc(-${idx} * (85vw + 20px)))`;
+    updateDots(idx);
+  };
+
+  // Touch swipe
+  let startX = 0, isDragging = false;
+  if (slider) {
+    slider.addEventListener('touchstart', e => {
+      startX = e.touches[0].clientX;
+      isDragging = true;
+    }, {passive: true});
+    slider.addEventListener('touchend', e => {
+      if (!isDragging || !isMobile()) return;
+      const diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) {
+        if (diff > 0 && current < cards.length - 1) current++;
+        else if (diff < 0 && current > 0) current--;
+        goSlide(current);
+      }
+      isDragging = false;
+    }, {passive: true});
+  }
+
+  // Reset on resize
+  window.addEventListener('resize', () => {
+    if (!isMobile()) {
+      if (slider) slider.style.transform = '';
+      current = 0;
+      updateDots(0);
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
