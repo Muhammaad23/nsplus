@@ -779,8 +779,13 @@
         <h2 class="section-title">Sovutish Kameralari Kolleksiyasi</h2>
         <p class="section-sub">Barcha ehtiyojlar uchun mos yechimlarni kashf eting</p>
       </div>
-      <a href="#" class="btn-outline-blue">Barcha mahsulotlar <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-    </div>
+      <a href="#" class="btn-outline-blue">
+        Barcha mahsulotlar
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+        </svg>
+    </a>    </div>
 
     <div class="products-grid">
 
@@ -1637,23 +1642,37 @@
   font-size: 14.5px;
   margin-top: 8px;
 }
-.btn-outline-blue {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  border: 1.5px solid var(--blue);
-  color: var(--blue);
-  background: transparent;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: all 0.2s;
-  flex-shrink: 0;
+.btn-outline-blue{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border: 2px solid #2563eb;
+    color: #2563eb;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
 }
+
+/* Telefon uchun responsive */
+@media (max-width: 768px){
+    .btn-outline-blue{
+        display: flex;
+        width: fit-content;
+        margin-top: 12px; /* mahsulotlar tagiga tushadi */
+        padding: 8px 16px; /* button kichrayadi */
+        font-size: 14px;
+        border-radius: 8px;
+    }
+
+    .btn-outline-blue svg{
+        width: 14px;
+        height: 14px;
+    }
+}
+
 .btn-outline-blue:hover { background: var(--blue); color: #fff; }
 
 .products-grid {
