@@ -1196,7 +1196,6 @@
   </div>
 </section>
 
-<div style="height:60px; background:#f4f7fb;"></div>
 
 <section class="partners-section">
 
@@ -1339,7 +1338,164 @@
 
 </section>
 
+<footer class="footer">
 
+  <div class="footer-container">
+
+      <!-- LOGO -->
+      <div class="footer-box">
+          <h2 class="footer-logo">NS PLUS</h2>
+          <p class="footer-text">
+              To'gri tanlov !
+          </p>
+      </div>
+
+      <!-- MENU -->
+      <div class="footer-box">
+          <h3>Menu</h3>
+
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Portfolio</a>
+          <a href="#">Contact</a>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="footer-box">
+          <h3>Contact</h3>
+
+          <p>+998 90 123 45 67</p>
+          <p>nsplus@gmail.com</p>
+          <p>Tashkent, Uzbekistan</p>
+      </div>
+
+      <!-- SOCIAL -->
+      <div class="footer-box">
+          <h3>Social Media</h3>
+
+          <div class="socials">
+
+              <a href="#">
+                  Instagram
+              </a>
+
+              <a href="#">
+                  Telegram
+              </a>
+
+              <a href="#">
+                  YouTube
+              </a>
+
+          </div>
+      </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+      © 2026 NS PLUS. All rights reserved.
+  </div>
+
+</footer>
+
+<style>
+  /* FOOTER */
+
+.footer{
+    width:100%;
+    background:#0f172a;
+    color:#fff;
+    padding-top:70px;
+}
+
+.footer-container{
+    width:90%;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:40px;
+
+    padding-bottom:50px;
+}
+
+.footer-box h3{
+    font-size:24px;
+    margin-bottom:20px;
+}
+
+.footer-logo{
+    font-size:34px;
+    margin-bottom:20px;
+    color:#fff;
+}
+
+.footer-text{
+    line-height:1.8;
+    color:#cbd5e1;
+    max-width:300px;
+}
+
+.footer-box a{
+    display:block;
+    color:#cbd5e1;
+    text-decoration:none;
+    margin-bottom:14px;
+    transition:0.3s;
+    font-size:17px;
+}
+
+.footer-box a:hover{
+    color:#fff;
+    transform:translateX(5px);
+}
+
+.footer-box p{
+    color:#cbd5e1;
+    margin-bottom:14px;
+    line-height:1.7;
+}
+
+.socials{
+    display:flex;
+    flex-direction:column;
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,0.1);
+    text-align:center;
+    padding:25px 10px;
+    color:#94a3b8;
+    font-size:15px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .footer{
+        padding-top:50px;
+    }
+
+    .footer-container{
+        gap:35px;
+    }
+
+    .footer-logo{
+        font-size:28px;
+    }
+
+    .footer-box h3{
+        font-size:22px;
+    }
+
+}
+</style>
+
+
+<!-- hamkorlar -->
 <style>
 
 *{
@@ -1353,14 +1509,14 @@
 .partners-section{
   width:100%;
   overflow:hidden;
-  padding:50px 0;
+  padding:100px 0;
   background:#f6f6f6;
 }
 
 .section-title{
   text-align:center;
   font-size:42px;
-  margin-bottom:45px;
+  margin-bottom:55px;
   font-weight:700;
   color:#111;
 }
@@ -1389,18 +1545,13 @@
   width:170px;
   height:170px;
   flex-shrink:0;
-
   background:#fff;
   border-radius:24px;
-
   display:flex;
   align-items:center;
   justify-content:center;
-
   padding:20px;
-
   box-shadow:0 5px 15px rgba(0,0,0,0.08);
-
   transition:0.3s;
 }
 
