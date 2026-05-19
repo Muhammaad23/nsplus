@@ -1198,6 +1198,259 @@
 
 <div style="height:60px; background:#f4f7fb;"></div>
 
+<section class="partners-section">
+
+  <h2 class="section-title">
+      Bizning Hamkorlar
+  </h2>
+
+  <div class="slider">
+
+      <div class="slider-track">
+
+          <!-- ORIGINAL -->
+
+          <div class="country-item">
+              <img src="images/avtooyna.jpg">
+          </div>
+
+          <div class="country-item">
+              <img src="images/tashkent-city-mall.jpg">
+          </div>
+
+          <div class="country-item">
+              <img src="images/liftees.jpg">
+          </div>
+
+          <div class="country-item">
+              <img src="images/defense.jpg">
+          </div>
+
+          <div class="country-item">
+              <img src="images/bloom.jpg">
+          </div>
+
+          <div class="country-item">
+              <img src="images/fvv.jpg">
+          </div>
+
+          <div class="country-item">
+              <img src="images/government.jpg">
+          </div>
+
+          <div class="country-item">
+              <img src="images/uzbek-geologiya.jpg">
+          </div>
+
+          <div class="country-item">
+              <img src="images/uey-construction.jpg">
+          </div>
+
+          <div class="country-item">
+              <img src="images/koc-construction.jpg">
+          </div>
+
+          <div class="country-item">
+              <img src="images/armk.jpg">
+          </div>
+
+          <div class="country-item">
+              <img src="images/hmk.jpg">
+          </div>
+
+          <div class="country-item">
+              <img src="images/mudofaa.jpg">
+          </div>
+
+          <div class="country-item">
+              <img src="images/ies.jpg">
+          </div>
+
+          <div class="country-item">
+              <img src="images/milliy-gvardiya.jpg">
+          </div>
+
+
+          <!-- DUPLICATE FOR INFINITE -->
+
+          <div class="country-item">
+              <img src="images/avtooyna.jpg">
+          </div>
+
+          <div class="country-item">
+              <img src="images/tashkent-city-mall.jpg">
+          </div>
+
+          <div class="country-item">
+              <img src="images/liftees.jpg">
+          </div>
+
+          <div class="country-item">
+              <img src="images/defense.jpg">
+          </div>
+
+          <div class="country-item">
+              <img src="images/bloom.jpg">
+          </div>
+
+          <div class="country-item">
+              <img src="images/fvv.jpg">
+          </div>
+
+          <div class="country-item">
+              <img src="images/government.jpg">
+          </div>
+
+          <div class="country-item">
+              <img src="images/uzbek-geologiya.jpg">
+          </div>
+
+          <div class="country-item">
+              <img src="images/uey-construction.jpg">
+          </div>
+
+          <div class="country-item">
+              <img src="images/koc-construction.jpg">
+          </div>
+
+          <div class="country-item">
+              <img src="images/armk.jpg">
+          </div>
+
+          <div class="country-item">
+              <img src="images/hmk.jpg">
+          </div>
+
+          <div class="country-item">
+              <img src="images/mudofaa.jpg">
+          </div>
+
+          <div class="country-item">
+              <img src="images/ies.jpg">
+          </div>
+
+          <div class="country-item">
+              <img src="images/milliy-gvardiya.jpg">
+          </div>
+
+      </div>
+
+  </div>
+
+</section>
+
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* SECTION */
+
+.partners-section{
+  width:100%;
+  overflow:hidden;
+  padding:50px 0;
+  background:#f1f1f1;
+}
+
+.section-title{
+  text-align:center;
+  font-size:42px;
+  margin-bottom:45px;
+  font-weight:700;
+  color:#111;
+}
+
+/* SLIDER */
+
+.slider{
+  width:100%;
+  overflow:hidden;
+  position:relative;
+}
+
+.slider-track{
+  display:flex;
+  align-items:center;
+  gap:35px;
+  width:max-content;
+
+  /* TOXTOVSIZ AYLANISH */
+  animation:scroll 35s linear infinite;
+}
+
+/* ITEM */
+
+.country-item{
+  width:170px;
+  height:170px;
+  flex-shrink:0;
+
+  background:#fff;
+  border-radius:24px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:20px;
+
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+  transition:0.3s;
+}
+
+.country-item:hover{
+  transform:translateY(-5px);
+}
+
+.country-item img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+
+/* INFINITE ANIMATION */
+
+@keyframes scroll{
+  0%{
+      transform:translateX(0);
+  }
+
+  100%{
+      transform:translateX(-50%);
+  }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  .section-title{
+      font-size:28px;
+      margin-bottom:30px;
+  }
+
+  .slider-track{
+      gap:20px;
+      animation-duration:25s;
+  }
+
+  .country-item{
+      width:120px;
+      height:120px;
+      border-radius:18px;
+      padding:15px;
+  }
+
+}
+
+</style>
+
 <style>
 /* ── PRODUCTS SECTION ── */
 .products-section {
