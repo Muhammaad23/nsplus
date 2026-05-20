@@ -30,17 +30,101 @@
     overflow-x: hidden;
   }
 
-.heroimg{
-  width: 600px;
-  height: 420px;
-  border-radius: 3%;
-}
+  .heroimg{
+    width: 600px;
+    height: 420px;
+    border-radius: 3%;
+  }
 
-.logojpg{
-  width: 70px;
-  height: 40px;
-}
+  .nsplus-categories-wrapper{
+      width:100%;
+      overflow-x:auto;
+    }
 
+    .nsplus-categories{
+      display:flex;
+      gap:20px;
+      min-width:max-content;
+      margin-top: 50px;
+    }
+
+    .nsplus-card-a1{
+      width:250px;
+      background:#fff;
+      border:1px solid #d6d6d6;
+      border-radius:6px;
+      overflow:hidden;
+      transition:0.3s;
+      box-shadow:0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .nsplus-card-a1:hover{
+      transform:translateY(-8px);
+      box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .nsplus-img-box-a1{
+      height:200px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#fff;
+      padding:10px;
+    }
+
+    .nsplus-img-box-a1 img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+    }
+
+    .nsplus-content-a1{
+      background:#dbe4ec;
+      text-align:center;
+    }
+
+    .nsplus-title-a1{
+      font-size:24px;
+      line-height:1.3;
+      color:#111;
+      font-weight:500;
+      margin-bottom:10px;
+      min-height:120px;
+    }
+
+    .nsplus-number-a1{
+      font-size:20px;
+      color:#111;
+      font-weight:500;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      .nsplus-card-a1{
+        width:240px;
+      }
+
+      .nsplus-img-box-a1{
+        height:260px;
+      }
+
+      .nsplus-title-a1{
+        font-size:20px;
+        min-height:100px;
+      }
+
+      .nsplus-number-a1{
+        font-size:22px;
+      }
+
+    }
+
+  .logojpg{
+    width: 70px;
+    height: 40px;
+  }
   /* ── TOP BAR ── */
   .topbar {
     background: #0c1a45;
@@ -557,6 +641,7 @@
           </div>
             <div><img class="heroimg" src="./images/imagee.jpg" alt=""></div>
             
+            
             <!-- Background -->
             <rect width="600" height="390" fill="url(#bgGrad)"/>
 
@@ -701,8 +786,7 @@
             <!-- Reflection on floor -->
             <rect x="30" y="320" width="335" height="40" fill="rgba(255,255,255,0.06)" rx="2"/>
             <rect x="415" y="320" width="168" height="40" fill="rgba(255,255,255,0.05)" rx="2"/>
-          </svg> -->
-
+          </svg>
           <!-- STATS CARD -->
           <div class="stats-float">
             <div class="s-item">
@@ -738,6 +822,259 @@
       </div>
 
     </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="nsplus-categories-wrapper">
+
+    <div class="nsplus-categories">
+  
+      <!-- CARD 1 -->
+      <div class="nsplus-card-a1">
+  
+        <div class="nsplus-img-box-a1">
+          <img src="./images/1.jpg" alt="">
+        </div>
+  
+        <div class="nsplus-content-a1">
+          <div class="nsplus-title-a1">
+            Тепловая<br>
+            линия (A 700)
+          </div>
+  
+          <div class="nsplus-number-a1">
+            3-8
+          </div>
+        </div>
+  
+      </div>
+  
+  
+  
+      <!-- CARD 2 -->
+      <div class="nsplus-card-a1">
+  
+        <div class="nsplus-img-box-a1">
+          <img src="./images/2.jpg" alt="">
+        </div>
+  
+        <div class="nsplus-content-a1">
+          <div class="nsplus-title-a1">
+            Плиты<br>
+            (A 900)
+          </div>
+  
+          <div class="nsplus-number-a1">
+            9-11
+          </div>
+        </div>
+  
+      </div>
+  
+  
+  
+      <!-- CARD 3 -->
+      <div class="nsplus-card-a1">
+  
+        <div class="nsplus-img-box-a1">
+          <img src="./images/3.jpg" alt="">
+        </div>
+  
+        <div class="nsplus-content-a1">
+          <div class="nsplus-title-a1">
+            Шкафы<br>
+            жарочные<br>
+            (B 900)
+          </div>
+  
+          <div class="nsplus-number-a1">
+            12-14
+          </div>
+        </div>
+  
+      </div>
+  
+  
+  
+      <!-- CARD 4 -->
+      <div class="nsplus-card-a1">
+  
+        <div class="nsplus-img-box-a1">
+          <img src="./images/4.jpg" alt="">
+        </div>
+  
+        <div class="nsplus-content-a1">
+          <div class="nsplus-title-a1">
+            Электрические котлы,<br>
+            Электрические<br>
+            сковородки ( J 900)
+          </div>
+  
+          <div class="nsplus-number-a1">
+            15-19
+          </div>
+        </div>
+  
+      </div>
+  
+  
+  
+      <!-- CARD 5 -->
+      <div class="nsplus-card-a1">
+  
+        <div class="nsplus-img-box-a1">
+          <img src="./images/5.jpg" alt="">
+        </div>
+  
+        <div class="nsplus-content-a1">
+          <div class="nsplus-title-a1">
+            Линия раздачи<br>
+            питания (Classic)
+          </div>
+  
+          <div class="nsplus-number-a1">
+            21-31
+          </div>
+        </div>
+  
+      </div>
+  
+  
+  
+      <!-- CARD 6 -->
+      <div class="nsplus-card-a1">
+  
+        <div class="nsplus-img-box-a1">
+          <img src="./images/6.jpg" alt="">
+        </div>
+  
+        <div class="nsplus-content-a1">
+          <div class="nsplus-title-a1">
+            Линия раздачи<br>
+            питания (Modern)
+          </div>
+  
+          <div class="nsplus-number-a1">
+            32-40
+          </div>
+        </div>
+  
+      </div>
+      
+      <!-- CARD 2 -->
+      <div class="nsplus-card-a1">
+  
+        <div class="nsplus-img-box-a1">
+          <img src="./images/2.jpg" alt="">
+        </div>
+  
+        <div class="nsplus-content-a1">
+          <div class="nsplus-title-a1">
+            Плиты<br>
+            (A 900)
+          </div>
+  
+          <div class="nsplus-number-a1">
+            9-11
+          </div>
+        </div>
+  
+      </div>
+  
+  
+  
+      <!-- CARD 3 -->
+      <div class="nsplus-card-a1">
+  
+        <div class="nsplus-img-box-a1">
+          <img src="./images/3.jpg" alt="">
+        </div>
+  
+        <div class="nsplus-content-a1">
+          <div class="nsplus-title-a1">
+            Шкафы<br>
+            жарочные<br>
+            (B 900)
+          </div>
+  
+          <div class="nsplus-number-a1">
+            12-14
+          </div>
+        </div>
+  
+      </div>
+  
+  
+  
+      <!-- CARD 4 -->
+      <div class="nsplus-card-a1">
+  
+        <div class="nsplus-img-box-a1">
+          <img src="./images/4.jpg" alt="">
+        </div>
+  
+        <div class="nsplus-content-a1">
+          <div class="nsplus-title-a1">
+            Электрические котлы,<br>
+            Электрические<br>
+            сковородки ( J 900)
+          </div>
+  
+          <div class="nsplus-number-a1">
+            15-19
+          </div>
+        </div>
+  
+      </div>
+  
+  
+  
+      <!-- CARD 5 -->
+      <div class="nsplus-card-a1">
+  
+        <div class="nsplus-img-box-a1">
+          <img src="./images/5.jpg" alt="">
+        </div>
+  
+        <div class="nsplus-content-a1">
+          <div class="nsplus-title-a1">
+            Линия раздачи<br>
+            питания (Classic)
+          </div>
+  
+          <div class="nsplus-number-a1">
+            21-31
+          </div>
+        </div>
+  
+      </div>
+  
+  
+  
+      <!-- CARD 6 -->
+      <div class="nsplus-card-a1">
+  
+        <div class="nsplus-img-box-a1">
+          <img src="./images/6.jpg" alt="">
+        </div>
+  
+        <div class="nsplus-content-a1">
+          <div class="nsplus-title-a1">
+            Линия раздачи<br>
+            питания (Modern)
+          </div>
+  
+          <div class="nsplus-number-a1">
+            32-40
+          </div>
+        </div>
+  
+      </div>
+  
+    </div>
+  
   </div>
 </section>
 
