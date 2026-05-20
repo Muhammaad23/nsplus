@@ -30,6 +30,17 @@
     overflow-x: hidden;
   }
 
+.heroimg{
+  width: 600px;
+  height: 420px;
+  border-radius: 3%;
+}
+
+.logojpg{
+  width: 70px;
+  height: 40px;
+}
+
   /* ── TOP BAR ── */
   .topbar {
     background: #0c1a45;
@@ -429,19 +440,15 @@
     <div class="nav-inner">
       <!-- NS Logo -->
       <a href="#" class="logo" aria-label="NS Sovutish">
-        <div class="logo-wrap">
-          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-            <!-- Feather/wing decorative swirls -->
+          <!-- <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 54 Q6 38 18 20 Q30 6 50 10 Q38 20 34 32 Q28 44 30 54 Z" fill="#1a56db" opacity="0.12"/>
             <path d="M16 51 Q9 37 20 22 Q32 9 48 13 Q38 22 34 33 Q28 44 31 52 Z" fill="#1a56db" opacity="0.22"/>
             <path d="M18 49 Q13 37 22 24 Q33 12 46 17 Q38 24 35 34 Q29 44 32 50 Z" fill="#1a56db" opacity="0.38"/>
             <path d="M20 47 Q17 37 24 26 Q33 15 44 20 Q38 26 36 35 Q30 44 33 48 Z" fill="#1a56db" opacity="0.18"/>
-            <!-- N letter -->
             <text x="5" y="58" font-family="Montserrat,sans-serif" font-size="30" font-weight="900" fill="#0c1a45">N</text>
-            <!-- S letter -->
             <text x="33" y="58" font-family="Montserrat,sans-serif" font-size="30" font-weight="900" fill="#1a56db">S</text>
-          </svg>
-        </div>
+          </svg> -->
+            <img class="logojpg" src="./images/logo.jpg" alt="">
       </a>
 
       <!-- Links -->
@@ -475,7 +482,7 @@
         </div>
 
         <h1 class="hero-title">
-          NS —<br>Sovutish
+          NS Plus<br>Sovutish
           <span class="blue">Kameralari</span>
         </h1>
 
@@ -548,44 +555,8 @@
               <span>GOST 23833-95</span>
             </div>
           </div>
-
-          <!-- Cold chamber SVG illustration -->
-          <svg class="hero-chamber-img" viewBox="0 0 600 390" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#cddaf0"/>
-                <stop offset="60%" stop-color="#b8ccdf"/>
-                <stop offset="100%" stop-color="#a0b8d0"/>
-              </linearGradient>
-              <linearGradient id="wallGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#e8f0f8"/>
-                <stop offset="100%" stop-color="#d0dcea"/>
-              </linearGradient>
-              <linearGradient id="panelMain" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#f4f8fc"/>
-                <stop offset="40%" stop-color="#ffffff"/>
-                <stop offset="100%" stop-color="#eaf0f8"/>
-              </linearGradient>
-              <linearGradient id="panelSide" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0%" stop-color="#ccd8e8"/>
-                <stop offset="100%" stop-color="#b0c4d8"/>
-              </linearGradient>
-              <linearGradient id="floorGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#b8cad8"/>
-                <stop offset="100%" stop-color="#98b0c4"/>
-              </linearGradient>
-              <linearGradient id="doorGrad" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#f8fbff"/>
-                <stop offset="100%" stop-color="#edf3fa"/>
-              </linearGradient>
-              <filter id="dropShadow">
-                <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="rgba(15,32,87,0.2)"/>
-              </filter>
-              <filter id="softShadow">
-                <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="rgba(15,32,87,0.15)"/>
-              </filter>
-            </defs>
-
+            <div><img class="heroimg" src="./images/imagee.jpg" alt=""></div>
+            
             <!-- Background -->
             <rect width="600" height="390" fill="url(#bgGrad)"/>
 
@@ -730,7 +701,7 @@
             <!-- Reflection on floor -->
             <rect x="30" y="320" width="335" height="40" fill="rgba(255,255,255,0.06)" rx="2"/>
             <rect x="415" y="320" width="168" height="40" fill="rgba(255,255,255,0.05)" rx="2"/>
-          </svg>
+          </svg> -->
 
           <!-- STATS CARD -->
           <div class="stats-float">
@@ -1343,6 +1314,72 @@
 
 </section>
 
+<div class="steps-container">
+
+  <!-- 1 -->
+  <div class="step-box">
+    <div class="icon-circle">
+      ☎
+    </div>
+
+    <div class="step-content">
+      <h3><span>1</span> Murojaat</h3>
+      <p>
+        Ehtiyojlaringizni aytasiz, biz eng yaxshi kamera modelini tavsiya qilamiz.
+      </p>
+    </div>
+  </div>
+
+  <div class="arrow">→</div>
+
+  <!-- 2 -->
+  <div class="step-box">
+    <div class="icon-circle">
+      🧮
+    </div>
+
+    <div class="step-content">
+      <h3><span>2</span> Hisoblash</h3>
+      <p>
+        “Kamera konstruktori” dasturi bilan tez hisob-kitob va komplektatsiya aniqlanadi.
+      </p>
+    </div>
+  </div>
+
+  <div class="arrow">→</div>
+
+  <!-- 3 -->
+  <div class="step-box">
+    <div class="icon-circle">
+      🚚
+    </div>
+
+    <div class="step-content">
+      <h3><span>3</span> Yetkazib berish</h3>
+      <p>
+        Kamera butun to‘plam bilan yig‘ilmagan holda yetkazib beriladi.
+      </p>
+    </div>
+  </div>
+
+  <div class="arrow">→</div>
+
+  <!-- 4 -->
+  <div class="step-box">
+    <div class="icon-circle">
+      🛡
+    </div>
+
+    <div class="step-content">
+      <h3><span>4</span> O‘rnatish</h3>
+      <p>
+        Professional o‘rnatish va sinov. 5 yillik kafolat. 24/7 texnik qo‘llab-quvvatlash.
+      </p>
+    </div>
+  </div>
+
+</div>
+
 <footer class="footer">
 
   <div class="footer-container">
@@ -1606,6 +1643,69 @@
 }
 
 </style>
+
+<!-- murojatlar -->
+
+<style>
+  .steps-container{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    gap:15px;
+    flex-wrap:nowrap; 
+    margin-bottom: 70px;
+    margin-top: 70px;
+    padding: 30px;
+}
+
+.step-box{
+    width:25%; /* 4tasi bir qatorda */
+    min-height:180px;
+    background:#fff;
+    border:1px solid #eef2f7;
+    border-radius:22px;
+    padding:22px;
+    display:flex;
+    gap:15px;
+    align-items:flex-start;
+    box-shadow:0 5px 20px rgba(0,0,0,0.04);
+}
+
+.arrow{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    color:#2563eb;
+}
+
+/* PLANSHET */
+@media(max-width:1100px){
+
+    .steps-container{
+        flex-wrap:wrap;
+    }
+
+    .step-box{
+        width:48%;
+    }
+
+    .arrow{
+        display:none;
+    }
+}
+
+/* TELEFON */
+@media(max-width:700px){
+
+    .step-box{
+        width:100%;
+    }
+
+}
+  
+  </style>
 
 <style>
 /* ── PRODUCTS SECTION ── */
