@@ -828,6 +828,7 @@ nav {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 16px;
+  margin: 0 20px;
 }
 
 /* ── CARD ── */
@@ -959,14 +960,14 @@ nav {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
-  .desktop-grid { grid-template-columns: repeat(3, 1fr); }
+  .desktop-grid { grid-template-columns: repeat(3, 1fr); margin: 0 10px; }
 }
 @media (max-width: 768px) {
   header { padding: 0 20px; }
   nav { display: none; }
   .hero { padding: 40px 20px 56px; }
   main { padding: 40px 20px 60px; }
-  .desktop-grid { display: none !important; }
+  .desktop-grid { display: none !important; margin: 0 10px;}
   .carousel-wrap { display: block; }
   .section-num { font-size: 28px; }
 }
