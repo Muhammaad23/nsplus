@@ -293,36 +293,6 @@ const ALL_CATALOG = [
     ]
   },
   {
-    id:'classic', tabKey:'tab_classic', color:'#b45309',
-    sectionTitle:{ru:'Линия раздачи питания Classic',uz:'Classic ovqat ulash liniyasi',en:'Classic Food Service Line'},
-    items:[
-      {img:'./images/5.jpg',badge:'ПМЭС-70к',
-       title:{ru:'Мармит 1-х блюд ПМЭС-70к',uz:'Birinchi taomlar marmiti PMES-70k',en:'First Course Bain-Marie PMES-70k'},
-       desc:{ru:'Прилавок-мармит для хранения первых блюд в наплитных котлах. Регулировка 30–285°C. Полка с подсветкой.',uz:'Birinchi taomlar uchun prilvok-marmit. 30–285°C. Yoritilgan ustki javon.',en:'Counter bain-marie for first courses. 30–285°C. Illuminated shelf.'},
-       specs:{ru:['Температура: 30–285°C','Полка с подсветкой: есть','Направляющие для подносов: в комплекте','Ножки: регулируемые'],uz:['Harorat: 30–285°C','Yoritilgan javon: mavjud',"Tovoq yo'naltirgichlari: to'plamda",'Oyoqlar: sozlanadi'],en:['Temp: 30–285°C','Illuminated shelf: yes','Tray guides: included','Feet: adjustable']}},
-      {img:'./images/6.jpg',badge:'ПМЭС-70К-01',
-       title:{ru:'Мармит 1-х блюд ПМЭС-70К-01 (1500мм)',uz:'Birinchi taomlar marmiti PMES-70K-01 (1500mm)',en:'First Course Bain-Marie PMES-70K-01 (1500mm)'},
-       desc:{ru:'Прилавок-мармит для первых блюд. 30–285°C. Полка с подсветкой. Ширина 1500 мм.',uz:'Birinchi taomlar. 30–285°C. Yoritilgan javon. Kenglik 1500 mm.',en:'Counter bain-marie for first courses. 30–285°C. Illuminated shelf. Width 1500 mm.'},
-       specs:{ru:['Температура: 30–285°C','Ширина: 1500 мм','Полка с подсветкой: есть','Ножки: регулируемые'],uz:['Harorat: 30–285°C','Kenglik: 1500 mm','Yoritilgan javon: mavjud','Oyoqlar: sozlanadi'],en:['Temp: 30–285°C','Width: 1500 mm','Illuminated shelf: yes','Feet: adjustable']}},
-      {img:'./images/1.jpg',badge:'ПМЭС-70к-60',
-       title:{ru:'Мармит 2-х блюд ПМЭС-70к-60',uz:'Ikkinchi taomlar marmiti PMES-70k-60',en:'Second Course Bain-Marie PMES-70k-60'},
-       desc:{ru:'Для первых и вторых блюд в гастроёмкостях. Обогрев горячим воздухом. Нижний нейтральный шкаф. 30–85°C.',uz:"Birinchi va ikkinchi taomlar. Issiq havo. Pastki neytral shkaf. 30–85°C.",en:'For first and second courses in GN containers. Hot air heating. Lower neutral cabinet. 30–85°C.'},
-       specs:{ru:['Температура: 30–85°C','Обогрев: горячий воздух','Нижний шкаф: нейтральный','Двойная полка: есть','Ножки: регулируемые'],uz:['Harorat: 30–85°C','Isitish: issiq havo','Pastki shkaf: neytral','Qo\'sh javon: mavjud','Oyoqlar: sozlanadi'],en:['Temp: 30–85°C','Heating: hot air','Lower cabinet: neutral','Double shelf: yes','Feet: adjustable']}},
-      {img:'./images/2.jpg',badge:'ПТЭ-70к-80',
-       title:{ru:'Подогреватель тарелок ПТЭ-70к-80',uz:'Tarelka isitgich PTE-70k-80',en:'Plate Warmer PTE-70k-80'},
-       desc:{ru:'Подогрев тарелок для 1-х и 2-х блюд (30–60°C). Загрузка 40 тарелок. Пружинный механизм подъёма.',uz:"Birinchi va ikkinchi taomlar tarelkalarini isitish (30–60°C). 40 ta tarelka. Yay ko'tarish.",en:'Plate warmer for 1st & 2nd courses (30–60°C). Capacity 40 plates. Spring lift mechanism.'},
-       specs:{ru:['Температура: 30–60°C','Загрузка: 40 тарелок','Механизм: пружинный подъём','Ножки: регулируемые'],uz:['Harorat: 30–60°C','Sig\'im: 40 tarelka','Mexanizm: yay ko\'tarish','Oyoqlar: sozlanadi'],en:['Temp: 30–60°C','Capacity: 40 plates','Mechanism: spring lift','Feet: adjustable']}},
-      {img:'./images/3.jpg',badge:'ПВТ-70К',
-       title:{ru:'Прилавок-витрина тепловой ПВТ-70К',uz:'Issiqlik vitrinali prilvok PVT-70K',en:'Heated Display Counter PVT-70K'},
-       desc:{ru:'Для хранения хлебобулочных и кондитерских изделий в тепле. Вентилятор, лампы подсветки.',uz:"Non va qandolat mahsulotlarini issiq saqlash. Ventilyator, yoritish.",en:'Heated display for bakery and confectionery. Fan, lighting lamps.'},
-       specs:{ru:['Обогрев: пар или горячий воздух','Вентилятор: есть','Лампы подсветки: есть','Ножки: регулируемые'],uz:['Isitish: bug\' yoki issiq havo','Ventilyator: mavjud','Yoritish: mavjud','Oyoqlar: sozlanadi'],en:['Heating: steam or hot air','Fan: yes','Lighting: yes','Feet: adjustable']}},
-      {img:'./images/1.jpg',badge:'ПВТ-70К',
-       title:{ru:'Прилавок-витрина тепловой ПВТ-70К',uz:'Issiqlik vitrinali prilvok PVT-70K',en:'Heated Display Counter PVT-70K'},
-       desc:{ru:'Для хранения хлебобулочных и кондитерских изделий в тепле. Вентилятор, лампы подсветки.',uz:"Non va qandolat mahsulotlarini issiq saqlash. Ventilyator, yoritish.",en:'Heated display for bakery and confectionery. Fan, lighting lamps.'},
-       specs:{ru:['Обогрев: пар или горячий воздух','Вентилятор: есть','Лампы подсветки: есть','Ножки: регулируемые'],uz:['Isitish: bug\' yoki issiq havo','Ventilyator: mavjud','Yoritish: mavjud','Oyoqlar: sozlanadi'],en:['Heating: steam or hot air','Fan: yes','Lighting: yes','Feet: adjustable']}}
-    ]
-  },
-  {
     id:'cold', tabKey:'tab_cold', color:'#0369a1',
     descKey: 'desc_cold',
     sectionTitle:{ru:'Холодильные камеры — готовые решения',uz:'Sovutish kameralari — tayyor yechimlar',en:'Cold Rooms — Ready Solutions'},
@@ -434,6 +404,36 @@ const ALL_CATALOG = [
        title:{ru:'Цистерна 10 500 л — полный вид',uz:'10 500 l sisterna — to\'liq ko\'rinish',en:'10 500 L Cistern — full view'},
        desc:{ru:'Донные клапаны Ду-50. Площадки обслуживания с обеих сторон. AISI 304.',uz:'Tub klapanlar Du-50. Har ikki tomonda xizmat maydonchalari. AISI 304.',en:'DN-50 bottom valves. Service platforms on both sides. AISI 304.'},
        specs:{ru:['Объём: 10 500 л','Клапаны донные: Ду-50','Площадки обслуживания: с обеих сторон','Материал: AISI 304','Ось: двухосная'],uz:['Hajm: 10 500 l','Tub klapan: Du-50','Xizmat maydoni: har ikki tomonda','Material: AISI 304','O\'q: ikkita'],en:['Volume: 10 500 L','Bottom valves: DN-50','Service platforms: both sides','Material: AISI 304','Axles: twin']}}
+    ]
+  },
+  {
+    id:'classic', tabKey:'tab_classic', color:'#b45309',
+    sectionTitle:{ru:'Линия раздачи питания Classic',uz:'Classic ovqat ulash liniyasi',en:'Classic Food Service Line'},
+    items:[
+      {img:'./images/26.jpg',badge:'ПМЭС-70к',
+       title:{ru:'Мармит 1-х блюд ПМЭС-70к',uz:'Birinchi taomlar marmiti PMES-70k',en:'First Course Bain-Marie PMES-70k'},
+       desc:{ru:'Прилавок-мармит для хранения первых блюд в наплитных котлах. Регулировка 30–285°C. Полка с подсветкой.',uz:'Birinchi taomlar uchun prilvok-marmit. 30–285°C. Yoritilgan ustki javon.',en:'Counter bain-marie for first courses. 30–285°C. Illuminated shelf.'},
+       specs:{ru:['Температура: 30–285°C','Полка с подсветкой: есть','Направляющие для подносов: в комплекте','Ножки: регулируемые'],uz:['Harorat: 30–285°C','Yoritilgan javon: mavjud',"Tovoq yo'naltirgichlari: to'plamda",'Oyoqlar: sozlanadi'],en:['Temp: 30–285°C','Illuminated shelf: yes','Tray guides: included','Feet: adjustable']}},
+      {img:'./images/27.png',badge:'ПМЭС-70К-01',
+       title:{ru:'Мармит 1-х блюд ПМЭС-70К-01 (1500мм)',uz:'Birinchi taomlar marmiti PMES-70K-01 (1500mm)',en:'First Course Bain-Marie PMES-70K-01 (1500mm)'},
+       desc:{ru:'Прилавок-мармит для первых блюд. 30–285°C. Полка с подсветкой. Ширина 1500 мм.',uz:'Birinchi taomlar. 30–285°C. Yoritilgan javon. Kenglik 1500 mm.',en:'Counter bain-marie for first courses. 30–285°C. Illuminated shelf. Width 1500 mm.'},
+       specs:{ru:['Температура: 30–285°C','Ширина: 1500 мм','Полка с подсветкой: есть','Ножки: регулируемые'],uz:['Harorat: 30–285°C','Kenglik: 1500 mm','Yoritilgan javon: mavjud','Oyoqlar: sozlanadi'],en:['Temp: 30–285°C','Width: 1500 mm','Illuminated shelf: yes','Feet: adjustable']}},
+      {img:'./images/28.jpg',badge:'ПМЭС-70к-60',
+       title:{ru:'Мармит 2-х блюд ПМЭС-70к-60',uz:'Ikkinchi taomlar marmiti PMES-70k-60',en:'Second Course Bain-Marie PMES-70k-60'},
+       desc:{ru:'Для первых и вторых блюд в гастроёмкостях. Обогрев горячим воздухом. Нижний нейтральный шкаф. 30–85°C.',uz:"Birinchi va ikkinchi taomlar. Issiq havo. Pastki neytral shkaf. 30–85°C.",en:'For first and second courses in GN containers. Hot air heating. Lower neutral cabinet. 30–85°C.'},
+       specs:{ru:['Температура: 30–85°C','Обогрев: горячий воздух','Нижний шкаф: нейтральный','Двойная полка: есть','Ножки: регулируемые'],uz:['Harorat: 30–85°C','Isitish: issiq havo','Pastki shkaf: neytral','Qo\'sh javon: mavjud','Oyoqlar: sozlanadi'],en:['Temp: 30–85°C','Heating: hot air','Lower cabinet: neutral','Double shelf: yes','Feet: adjustable']}},
+      {img:'./images/29.jpg',badge:'ПТЭ-70к-80',
+       title:{ru:'Подогреватель тарелок ПТЭ-70к-80',uz:'Tarelka isitgich PTE-70k-80',en:'Plate Warmer PTE-70k-80'},
+       desc:{ru:'Подогрев тарелок для 1-х и 2-х блюд (30–60°C). Загрузка 40 тарелок. Пружинный механизм подъёма.',uz:"Birinchi va ikkinchi taomlar tarelkalarini isitish (30–60°C). 40 ta tarelka. Yay ko'tarish.",en:'Plate warmer for 1st & 2nd courses (30–60°C). Capacity 40 plates. Spring lift mechanism.'},
+       specs:{ru:['Температура: 30–60°C','Загрузка: 40 тарелок','Механизм: пружинный подъём','Ножки: регулируемые'],uz:['Harorat: 30–60°C','Sig\'im: 40 tarelka','Mexanizm: yay ko\'tarish','Oyoqlar: sozlanadi'],en:['Temp: 30–60°C','Capacity: 40 plates','Mechanism: spring lift','Feet: adjustable']}},
+      {img:'./images/4a.jpg',badge:'ПВТ-70К',
+       title:{ru:'Прилавок-витрина тепловой ПВТ-70К',uz:'Issiqlik vitrinali prilvok PVT-70K',en:'Heated Display Counter PVT-70K'},
+       desc:{ru:'Для хранения хлебобулочных и кондитерских изделий в тепле. Вентилятор, лампы подсветки.',uz:"Non va qandolat mahsulotlarini issiq saqlash. Ventilyator, yoritish.",en:'Heated display for bakery and confectionery. Fan, lighting lamps.'},
+       specs:{ru:['Обогрев: пар или горячий воздух','Вентилятор: есть','Лампы подсветки: есть','Ножки: регулируемые'],uz:['Isitish: bug\' yoki issiq havo','Ventilyator: mavjud','Yoritish: mavjud','Oyoqlar: sozlanadi'],en:['Heating: steam or hot air','Fan: yes','Lighting: yes','Feet: adjustable']}},
+      {img:'./images/5a.jpg',badge:'ПВТ-70К',
+       title:{ru:'Прилавок-витрина тепловой ПВТ-70К',uz:'Issiqlik vitrinali prilvok PVT-70K',en:'Heated Display Counter PVT-70K'},
+       desc:{ru:'Для хранения хлебобулочных и кондитерских изделий в тепле. Вентилятор, лампы подсветки.',uz:"Non va qandolat mahsulotlarini issiq saqlash. Ventilyator, yoritish.",en:'Heated display for bakery and confectionery. Fan, lighting lamps.'},
+       specs:{ru:['Обогрев: пар или горячий воздух','Вентилятор: есть','Лампы подсветки: есть','Ножки: регулируемые'],uz:['Isitish: bug\' yoki issiq havo','Ventilyator: mavjud','Yoritish: mavjud','Oyoqlar: sozlanadi'],en:['Heating: steam or hot air','Fan: yes','Lighting: yes','Feet: adjustable']}}
     ]
   }
 ];
