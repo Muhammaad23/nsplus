@@ -106,7 +106,7 @@ nav { background: #fff; border-bottom: 1px solid #e8edf5; position: sticky; top:
 .s-num { font-family: 'Montserrat', sans-serif; font-size: 19px; font-weight: 800; color: var(--blue); line-height: 1; margin-bottom: 4px; }
 .s-lbl { font-size: 10px; color: #6b7280; font-weight: 500; line-height: 1.3; }
 
-.hero-badge { position: absolute; top: 18px; left: 18px; background: #fff; border-radius: 14px; padding: 11px 15px; box-shadow: 0 8px 28px rgba(15,32,87,.12); display: flex; align-items: center; gap: 10px; animation: float 3s ease-in-out infinite; z-index: 1; }
+.hero-badge { position: absolute; top: 18px; left: 18px; background: #fff; border-radius: 14px; padding: 11px 15px; box-shadow: 0 8px 28px rgba(15,32,87,.12); display: flex; align-items: center; gap: 10px; animation: float 3s ease-in-out infinite; }
 .hero-badge-icon { width: 36px; height: 36px; background: linear-gradient(135deg,#1a56db,#3b82f6); border-radius: 10px; display: flex; align-items: center; justify-content: center; }
 .hero-badge-icon svg { color: #fff; }
 .hero-badge-text strong { display: block; font-size: 13px; font-weight: 800; font-family: 'Montserrat', sans-serif; color: var(--text); }
@@ -277,15 +277,15 @@ nav { background: #fff; border-bottom: 1px solid #e8edf5; position: sticky; top:
   .cat-section-desc { font-size: 12.5px; padding: 10px 13px; }
 
   /* Lightbox mobile */
-  .lb-box { max-height: 95vh; border-radius: 16px; }
-  .lb-inner { grid-template-columns: 1fr; }
-  .lb-img-side { border-radius: 16px 16px 0 0; max-height: 200px; }
-  .lb-img-side img { object-fit: cover; height: 200px; }
-  .lb-info-side { padding: 16px; max-height: 60vh; overflow-y: auto; }
-  .lb-info-side h3 { font-size: 14px; padding-right: 24px; }
-  .lb-info-side p { font-size: 12.5px; }
-  #lbSpecs li { font-size: 12px; padding: 6px 9px; }
-  .lb-call { padding: 12px 16px; font-size: 12.5px; }
+  .lb-box { max-height: 92vh; border-radius: 16px; display: flex; flex-direction: column; overflow: hidden; }
+  .lb-inner { grid-template-columns: 1fr; display: flex; flex-direction: column; flex: 1; min-height: 0; overflow: hidden; }
+  .lb-img-side { border-radius: 16px 16px 0 0; flex-shrink: 0; aspect-ratio: 4/3; width: 100%; overflow: hidden; max-height: none; }
+  .lb-img-side img { width: 100%; height: 100%; object-fit: contain; background: #f1f5f9; display: block; }
+  .lb-info-side { padding: 14px 16px; flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; }
+  .lb-info-side h3 { font-size: 13.5px; padding-right: 24px; }
+  .lb-info-side p { font-size: 12px; }
+  #lbSpecs li { font-size: 11.5px; padding: 5px 9px; }
+  .lb-call { padding: 11px 14px; font-size: 12.5px; margin-top: 6px; }
 
   .adv-section { padding: 48px 0 40px; }
   .partners-section { padding: 48px 0; }
