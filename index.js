@@ -172,9 +172,23 @@ function setLang(lang) {
   buildAllCatalogs();
 }
 
+
 // ── HAMBURGER ──
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
+
+// Wrap phone btn + hamburger into nav-right-group for right-corner alignment on mobile
+(function wrapNavRight() {
+  const phoneBtn = document.querySelector('.btn-phone-nav');
+  if (!phoneBtn || !hamburger) return;
+  const parent = hamburger.parentNode;
+  const group = document.createElement('div');
+  group.className = 'nav-right-group';
+  parent.insertBefore(group, phoneBtn);
+  group.appendChild(phoneBtn);
+  group.appendChild(hamburger);
+})();
+
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('open');
   mobileMenu.classList.toggle('open');
@@ -293,6 +307,36 @@ const ALL_CATALOG = [
     ]
   },
   {
+    id:'classic', tabKey:'tab_classic', color:'#b45309',
+    sectionTitle:{ru:'Линия раздачи питания Classic',uz:'Classic ovqat ulash liniyasi',en:'Classic Food Service Line'},
+    items:[
+      {img:'./images/5.jpg',badge:'ПМЭС-70к',
+       title:{ru:'Мармит 1-х блюд ПМЭС-70к',uz:'Birinchi taomlar marmiti PMES-70k',en:'First Course Bain-Marie PMES-70k'},
+       desc:{ru:'Прилавок-мармит для хранения первых блюд в наплитных котлах. Регулировка 30–285°C. Полка с подсветкой.',uz:'Birinchi taomlar uchun prilvok-marmit. 30–285°C. Yoritilgan ustki javon.',en:'Counter bain-marie for first courses. 30–285°C. Illuminated shelf.'},
+       specs:{ru:['Температура: 30–285°C','Полка с подсветкой: есть','Направляющие для подносов: в комплекте','Ножки: регулируемые'],uz:['Harorat: 30–285°C','Yoritilgan javon: mavjud',"Tovoq yo'naltirgichlari: to'plamda",'Oyoqlar: sozlanadi'],en:['Temp: 30–285°C','Illuminated shelf: yes','Tray guides: included','Feet: adjustable']}},
+      {img:'./images/6.jpg',badge:'ПМЭС-70К-01',
+       title:{ru:'Мармит 1-х блюд ПМЭС-70К-01 (1500мм)',uz:'Birinchi taomlar marmiti PMES-70K-01 (1500mm)',en:'First Course Bain-Marie PMES-70K-01 (1500mm)'},
+       desc:{ru:'Прилавок-мармит для первых блюд. 30–285°C. Полка с подсветкой. Ширина 1500 мм.',uz:'Birinchi taomlar. 30–285°C. Yoritilgan javon. Kenglik 1500 mm.',en:'Counter bain-marie for first courses. 30–285°C. Illuminated shelf. Width 1500 mm.'},
+       specs:{ru:['Температура: 30–285°C','Ширина: 1500 мм','Полка с подсветкой: есть','Ножки: регулируемые'],uz:['Harorat: 30–285°C','Kenglik: 1500 mm','Yoritilgan javon: mavjud','Oyoqlar: sozlanadi'],en:['Temp: 30–285°C','Width: 1500 mm','Illuminated shelf: yes','Feet: adjustable']}},
+      {img:'./images/1.jpg',badge:'ПМЭС-70к-60',
+       title:{ru:'Мармит 2-х блюд ПМЭС-70к-60',uz:'Ikkinchi taomlar marmiti PMES-70k-60',en:'Second Course Bain-Marie PMES-70k-60'},
+       desc:{ru:'Для первых и вторых блюд в гастроёмкостях. Обогрев горячим воздухом. Нижний нейтральный шкаф. 30–85°C.',uz:"Birinchi va ikkinchi taomlar. Issiq havo. Pastki neytral shkaf. 30–85°C.",en:'For first and second courses in GN containers. Hot air heating. Lower neutral cabinet. 30–85°C.'},
+       specs:{ru:['Температура: 30–85°C','Обогрев: горячий воздух','Нижний шкаф: нейтральный','Двойная полка: есть','Ножки: регулируемые'],uz:['Harorat: 30–85°C','Isitish: issiq havo','Pastki shkaf: neytral','Qo\'sh javon: mavjud','Oyoqlar: sozlanadi'],en:['Temp: 30–85°C','Heating: hot air','Lower cabinet: neutral','Double shelf: yes','Feet: adjustable']}},
+      {img:'./images/2.jpg',badge:'ПТЭ-70к-80',
+       title:{ru:'Подогреватель тарелок ПТЭ-70к-80',uz:'Tarelka isitgich PTE-70k-80',en:'Plate Warmer PTE-70k-80'},
+       desc:{ru:'Подогрев тарелок для 1-х и 2-х блюд (30–60°C). Загрузка 40 тарелок. Пружинный механизм подъёма.',uz:"Birinchi va ikkinchi taomlar tarelkalarini isitish (30–60°C). 40 ta tarelka. Yay ko'tarish.",en:'Plate warmer for 1st & 2nd courses (30–60°C). Capacity 40 plates. Spring lift mechanism.'},
+       specs:{ru:['Температура: 30–60°C','Загрузка: 40 тарелок','Механизм: пружинный подъём','Ножки: регулируемые'],uz:['Harorat: 30–60°C','Sig\'im: 40 tarelka','Mexanizm: yay ko\'tarish','Oyoqlar: sozlanadi'],en:['Temp: 30–60°C','Capacity: 40 plates','Mechanism: spring lift','Feet: adjustable']}},
+      {img:'./images/3.jpg',badge:'ПВТ-70К',
+       title:{ru:'Прилавок-витрина тепловой ПВТ-70К',uz:'Issiqlik vitrinali prilvok PVT-70K',en:'Heated Display Counter PVT-70K'},
+       desc:{ru:'Для хранения хлебобулочных и кондитерских изделий в тепле. Вентилятор, лампы подсветки.',uz:"Non va qandolat mahsulotlarini issiq saqlash. Ventilyator, yoritish.",en:'Heated display for bakery and confectionery. Fan, lighting lamps.'},
+       specs:{ru:['Обогрев: пар или горячий воздух','Вентилятор: есть','Лампы подсветки: есть','Ножки: регулируемые'],uz:['Isitish: bug\' yoki issiq havo','Ventilyator: mavjud','Yoritish: mavjud','Oyoqlar: sozlanadi'],en:['Heating: steam or hot air','Fan: yes','Lighting: yes','Feet: adjustable']}},
+      {img:'./images/1.jpg',badge:'ПВТ-70К',
+       title:{ru:'Прилавок-витрина тепловой ПВТ-70К',uz:'Issiqlik vitrinali prilvok PVT-70K',en:'Heated Display Counter PVT-70K'},
+       desc:{ru:'Для хранения хлебобулочных и кондитерских изделий в тепле. Вентилятор, лампы подсветки.',uz:"Non va qandolat mahsulotlarini issiq saqlash. Ventilyator, yoritish.",en:'Heated display for bakery and confectionery. Fan, lighting lamps.'},
+       specs:{ru:['Обогрев: пар или горячий воздух','Вентилятор: есть','Лампы подсветки: есть','Ножки: регулируемые'],uz:['Isitish: bug\' yoki issiq havo','Ventilyator: mavjud','Yoritish: mavjud','Oyoqlar: sozlanadi'],en:['Heating: steam or hot air','Fan: yes','Lighting: yes','Feet: adjustable']}}
+    ]
+  },
+  {
     id:'cold', tabKey:'tab_cold', color:'#0369a1',
     descKey: 'desc_cold',
     sectionTitle:{ru:'Холодильные камеры — готовые решения',uz:'Sovutish kameralari — tayyor yechimlar',en:'Cold Rooms — Ready Solutions'},
@@ -405,36 +449,6 @@ const ALL_CATALOG = [
        desc:{ru:'Донные клапаны Ду-50. Площадки обслуживания с обеих сторон. AISI 304.',uz:'Tub klapanlar Du-50. Har ikki tomonda xizmat maydonchalari. AISI 304.',en:'DN-50 bottom valves. Service platforms on both sides. AISI 304.'},
        specs:{ru:['Объём: 10 500 л','Клапаны донные: Ду-50','Площадки обслуживания: с обеих сторон','Материал: AISI 304','Ось: двухосная'],uz:['Hajm: 10 500 l','Tub klapan: Du-50','Xizmat maydoni: har ikki tomonda','Material: AISI 304','O\'q: ikkita'],en:['Volume: 10 500 L','Bottom valves: DN-50','Service platforms: both sides','Material: AISI 304','Axles: twin']}}
     ]
-  },
-  {
-    id:'classic', tabKey:'tab_classic', color:'#b45309',
-    sectionTitle:{ru:'Линия раздачи питания Classic',uz:'Classic ovqat ulash liniyasi',en:'Classic Food Service Line'},
-    items:[
-      {img:'./images/26.jpg',badge:'ПМЭС-70к',
-       title:{ru:'Мармит 1-х блюд ПМЭС-70к',uz:'Birinchi taomlar marmiti PMES-70k',en:'First Course Bain-Marie PMES-70k'},
-       desc:{ru:'Прилавок-мармит для хранения первых блюд в наплитных котлах. Регулировка 30–285°C. Полка с подсветкой.',uz:'Birinchi taomlar uchun prilvok-marmit. 30–285°C. Yoritilgan ustki javon.',en:'Counter bain-marie for first courses. 30–285°C. Illuminated shelf.'},
-       specs:{ru:['Температура: 30–285°C','Полка с подсветкой: есть','Направляющие для подносов: в комплекте','Ножки: регулируемые'],uz:['Harorat: 30–285°C','Yoritilgan javon: mavjud',"Tovoq yo'naltirgichlari: to'plamda",'Oyoqlar: sozlanadi'],en:['Temp: 30–285°C','Illuminated shelf: yes','Tray guides: included','Feet: adjustable']}},
-      {img:'./images/27.png',badge:'ПМЭС-70К-01',
-       title:{ru:'Мармит 1-х блюд ПМЭС-70К-01 (1500мм)',uz:'Birinchi taomlar marmiti PMES-70K-01 (1500mm)',en:'First Course Bain-Marie PMES-70K-01 (1500mm)'},
-       desc:{ru:'Прилавок-мармит для первых блюд. 30–285°C. Полка с подсветкой. Ширина 1500 мм.',uz:'Birinchi taomlar. 30–285°C. Yoritilgan javon. Kenglik 1500 mm.',en:'Counter bain-marie for first courses. 30–285°C. Illuminated shelf. Width 1500 mm.'},
-       specs:{ru:['Температура: 30–285°C','Ширина: 1500 мм','Полка с подсветкой: есть','Ножки: регулируемые'],uz:['Harorat: 30–285°C','Kenglik: 1500 mm','Yoritilgan javon: mavjud','Oyoqlar: sozlanadi'],en:['Temp: 30–285°C','Width: 1500 mm','Illuminated shelf: yes','Feet: adjustable']}},
-      {img:'./images/28.jpg',badge:'ПМЭС-70к-60',
-       title:{ru:'Мармит 2-х блюд ПМЭС-70к-60',uz:'Ikkinchi taomlar marmiti PMES-70k-60',en:'Second Course Bain-Marie PMES-70k-60'},
-       desc:{ru:'Для первых и вторых блюд в гастроёмкостях. Обогрев горячим воздухом. Нижний нейтральный шкаф. 30–85°C.',uz:"Birinchi va ikkinchi taomlar. Issiq havo. Pastki neytral shkaf. 30–85°C.",en:'For first and second courses in GN containers. Hot air heating. Lower neutral cabinet. 30–85°C.'},
-       specs:{ru:['Температура: 30–85°C','Обогрев: горячий воздух','Нижний шкаф: нейтральный','Двойная полка: есть','Ножки: регулируемые'],uz:['Harorat: 30–85°C','Isitish: issiq havo','Pastki shkaf: neytral','Qo\'sh javon: mavjud','Oyoqlar: sozlanadi'],en:['Temp: 30–85°C','Heating: hot air','Lower cabinet: neutral','Double shelf: yes','Feet: adjustable']}},
-      {img:'./images/29.jpg',badge:'ПТЭ-70к-80',
-       title:{ru:'Подогреватель тарелок ПТЭ-70к-80',uz:'Tarelka isitgich PTE-70k-80',en:'Plate Warmer PTE-70k-80'},
-       desc:{ru:'Подогрев тарелок для 1-х и 2-х блюд (30–60°C). Загрузка 40 тарелок. Пружинный механизм подъёма.',uz:"Birinchi va ikkinchi taomlar tarelkalarini isitish (30–60°C). 40 ta tarelka. Yay ko'tarish.",en:'Plate warmer for 1st & 2nd courses (30–60°C). Capacity 40 plates. Spring lift mechanism.'},
-       specs:{ru:['Температура: 30–60°C','Загрузка: 40 тарелок','Механизм: пружинный подъём','Ножки: регулируемые'],uz:['Harorat: 30–60°C','Sig\'im: 40 tarelka','Mexanizm: yay ko\'tarish','Oyoqlar: sozlanadi'],en:['Temp: 30–60°C','Capacity: 40 plates','Mechanism: spring lift','Feet: adjustable']}},
-      {img:'./images/4a.jpg',badge:'ПВТ-70К',
-       title:{ru:'Прилавок-витрина тепловой ПВТ-70К',uz:'Issiqlik vitrinali prilvok PVT-70K',en:'Heated Display Counter PVT-70K'},
-       desc:{ru:'Для хранения хлебобулочных и кондитерских изделий в тепле. Вентилятор, лампы подсветки.',uz:"Non va qandolat mahsulotlarini issiq saqlash. Ventilyator, yoritish.",en:'Heated display for bakery and confectionery. Fan, lighting lamps.'},
-       specs:{ru:['Обогрев: пар или горячий воздух','Вентилятор: есть','Лампы подсветки: есть','Ножки: регулируемые'],uz:['Isitish: bug\' yoki issiq havo','Ventilyator: mavjud','Yoritish: mavjud','Oyoqlar: sozlanadi'],en:['Heating: steam or hot air','Fan: yes','Lighting: yes','Feet: adjustable']}},
-      {img:'./images/5a.jpg',badge:'ПВТ-70К',
-       title:{ru:'Прилавок-витрина тепловой ПВТ-70К',uz:'Issiqlik vitrinali prilvok PVT-70K',en:'Heated Display Counter PVT-70K'},
-       desc:{ru:'Для хранения хлебобулочных и кондитерских изделий в тепле. Вентилятор, лампы подсветки.',uz:"Non va qandolat mahsulotlarini issiq saqlash. Ventilyator, yoritish.",en:'Heated display for bakery and confectionery. Fan, lighting lamps.'},
-       specs:{ru:['Обогрев: пар или горячий воздух','Вентилятор: есть','Лампы подсветки: есть','Ножки: регулируемые'],uz:['Isitish: bug\' yoki issiq havo','Ventilyator: mavjud','Yoritish: mavjud','Oyoqlar: sozlanadi'],en:['Heating: steam or hot air','Fan: yes','Lighting: yes','Feet: adjustable']}}
-    ]
   }
 ];
 
@@ -464,6 +478,236 @@ function buildTabs() {
 }
 
 // ══════════════════════════════════════════
+// DESKTOP CARD IMAGE SLIDER
+// Each cat-card gets an in-card image slider.
+// Since each item currently has only item.img (1 image),
+// multiple images are supported via item.images[] array.
+// ══════════════════════════════════════════
+function buildCardSlider(item, color, title) {
+  const imgs = Array.isArray(item.images) && item.images.length > 0
+    ? item.images : [item.img];
+  const multi = imgs.length > 1;
+
+  const imgWrap = document.createElement('div');
+  imgWrap.className = 'cat-card-img' + (multi ? ' has-multi' : '');
+
+  // Track
+  const track = document.createElement('div');
+  track.className = 'card-img-track';
+  imgs.forEach((src, i) => {
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = title + (multi ? ` ${i+1}` : '');
+    img.loading = 'lazy';
+    track.appendChild(img);
+  });
+  imgWrap.appendChild(track);
+
+  // Lens (single image only — shows on hover, click → lightbox)
+  const lens = document.createElement('div');
+  lens.className = 'cat-card-lens';
+  lens.innerHTML = `<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+    <circle cx="11" cy="11" r="8"/>
+    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    <line x1="11" y1="8" x2="11" y2="14"/>
+    <line x1="8" y1="11" x2="14" y2="11"/>
+  </svg>`;
+  imgWrap.appendChild(lens);
+
+  // Badge
+  const badge = document.createElement('span');
+  badge.className = 'cat-card-badge';
+  badge.style.background = color;
+  badge.textContent = item.badge;
+  imgWrap.appendChild(badge);
+
+  // Brand logo — always visible, bottom-right, above all slides
+  const brandLogo = document.createElement('img');
+  brandLogo.className = 'card-brand-logo';
+  brandLogo.src = './images/logo-brand.jpg';
+  brandLogo.alt = 'NS Plus';
+  imgWrap.appendChild(brandLogo);
+
+  if (!multi) return imgWrap;
+
+  // Multi-image: counter, dots, tap zones
+  const counter = document.createElement('span');
+  counter.className = 'card-img-counter';
+  counter.textContent = `1/${imgs.length}`;
+  imgWrap.appendChild(counter);
+
+  const dotsWrap = document.createElement('div');
+  dotsWrap.className = 'card-img-dots';
+  const dots = imgs.map((_, i) => {
+    const d = document.createElement('span');
+    d.className = 'card-img-dot' + (i === 0 ? ' active' : '');
+    dotsWrap.appendChild(d);
+    return d;
+  });
+  imgWrap.appendChild(dotsWrap);
+
+  const prevZone = document.createElement('div');
+  prevZone.className = 'card-img-prev';
+  const nextZone = document.createElement('div');
+  nextZone.className = 'card-img-next';
+  imgWrap.appendChild(prevZone);
+  imgWrap.appendChild(nextZone);
+
+  let cur = 0;
+  function goTo(idx) {
+    cur = (idx + imgs.length) % imgs.length;
+    track.style.transform = `translateX(-${cur * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle('active', i === cur));
+    counter.textContent = `${cur + 1}/${imgs.length}`;
+  }
+  prevZone.addEventListener('click', e => { e.stopPropagation(); goTo(cur - 1); });
+  nextZone.addEventListener('click', e => { e.stopPropagation(); goTo(cur + 1); });
+
+  let startX = 0;
+  imgWrap.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  imgWrap.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 30) { e.stopPropagation(); goTo(cur + (diff > 0 ? 1 : -1)); }
+  });
+
+  return imgWrap;
+}
+
+// ══════════════════════════════════════════
+// MOBILE SWIPE VIEWER
+// One viewer per section. All items become slides.
+// Each slide = card with image on top, info below.
+// Swipe/tap left-half → prev, right-half → next.
+// Counter (2/6) top-right, dots bottom-center.
+// Tap image or "Подробнее" → lightbox.
+// ══════════════════════════════════════════
+function buildSwipeViewer(group, items, lang) {
+  const viewer = document.createElement('div');
+  viewer.className = 'swipe-viewer';
+
+  // ── Outer card shell ──
+  const card = document.createElement('div');
+  card.className = 'swipe-card';
+  viewer.appendChild(card);
+
+  // ── Image area ──
+  const imgWrap = document.createElement('div');
+  imgWrap.className = 'swipe-img-wrap';
+  card.appendChild(imgWrap);
+
+  // Image track (all items side by side)
+  const track = document.createElement('div');
+  track.className = 'swipe-img-track';
+  items.forEach((item, i) => {
+    const img = document.createElement('img');
+    img.src = item.img;
+    const t = typeof item.title === 'object' ? item.title[lang] : item.title;
+    img.alt = t;
+    img.loading = i === 0 ? 'eager' : 'lazy';
+    img.addEventListener('click', () => openLB(item));
+    track.appendChild(img);
+  });
+  imgWrap.appendChild(track);
+
+  // Model badge top-left
+  const badgeEl = document.createElement('span');
+  badgeEl.className = 'swipe-badge';
+  badgeEl.style.background = group.color;
+  imgWrap.appendChild(badgeEl);
+
+  // Counter top-right (Instagram style)
+  const counterEl = document.createElement('span');
+  counterEl.className = 'swipe-counter-badge';
+  imgWrap.appendChild(counterEl);
+
+  // Dots bottom-center
+  const dotsWrap = document.createElement('div');
+  dotsWrap.className = 'swipe-dots-overlay';
+  const dots = items.map((_, i) => {
+    const d = document.createElement('span');
+    d.className = 'swipe-dot-o' + (i === 0 ? ' active' : '');
+    dotsWrap.appendChild(d);
+    return d;
+  });
+  imgWrap.appendChild(dotsWrap);
+
+  // Brand logo — fixed bottom-right, always visible above slides
+  const brandLogo = document.createElement('img');
+  brandLogo.className = 'swipe-brand-logo';
+  brandLogo.src = './images/logo-brand.jpg';
+  brandLogo.alt = 'NS Plus';
+  imgWrap.appendChild(brandLogo);
+
+  // Left / right tap zones (invisible)
+  const tapPrev = document.createElement('div');
+  tapPrev.className = 'swipe-tap-prev';
+  const tapNext = document.createElement('div');
+  tapNext.className = 'swipe-tap-next';
+  imgWrap.appendChild(tapPrev);
+  imgWrap.appendChild(tapNext);
+
+  // ── Info row below image ──
+  const infoEl = document.createElement('div');
+  infoEl.className = 'swipe-info';
+  card.appendChild(infoEl);
+
+  const nameEl  = document.createElement('p');  nameEl.className  = 'swipe-name';
+  const hintEl  = document.createElement('p');  hintEl.className  = 'swipe-hint';
+  const openBtn = document.createElement('button'); openBtn.className = 'swipe-open-btn';
+  openBtn.innerHTML = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+    <circle cx="11" cy="11" r="8"/>
+    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    <line x1="11" y1="8" x2="11" y2="14"/>
+    <line x1="8" y1="11" x2="14" y2="11"/>
+  </svg> Подробнее`;
+  infoEl.appendChild(nameEl);
+  infoEl.appendChild(hintEl);
+  infoEl.appendChild(openBtn);
+
+  // ── State ──
+  let cur = 0;
+  const total = items.length;
+
+  function update() {
+    const item  = items[cur];
+    const title = typeof item.title === 'object' ? item.title[lang] : item.title;
+    const specs = Array.isArray(item.specs) ? item.specs : item.specs[lang];
+
+    track.style.transform = `translateX(-${cur * 100}%)`;
+    badgeEl.textContent     = item.badge;
+    counterEl.textContent   = `${cur + 1}/${total}`;
+    nameEl.textContent      = title;
+    hintEl.textContent      = specs[0];
+    dots.forEach((d, i) => d.classList.toggle('active', i === cur));
+
+    // Update open button handler
+    openBtn.onclick = () => openLB(item);
+  }
+
+  function goTo(idx) {
+    cur = Math.max(0, Math.min(total - 1, idx));
+    update();
+  }
+
+  // Tap zones
+  tapPrev.addEventListener('click', () => goTo(cur - 1));
+  tapNext.addEventListener('click', () => goTo(cur + 1));
+
+  // Touch swipe
+  let startX = 0;
+  imgWrap.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+  }, { passive: true });
+  imgWrap.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) goTo(cur + (diff > 0 ? 1 : -1));
+  });
+
+  update();
+  return viewer;
+}
+
+// ══════════════════════════════════════════
 // BUILD CATALOG
 // ══════════════════════════════════════════
 function buildAllCatalogs() {
@@ -485,7 +729,7 @@ function buildAllCatalogs() {
       </div>
     `;
 
-    // Description paragraph (only for groups that have a descKey)
+    // Description paragraph
     if (group.descKey && T[lang][group.descKey]) {
       const descEl = document.createElement('p');
       descEl.className = 'cat-section-desc';
@@ -493,38 +737,36 @@ function buildAllCatalogs() {
       sec.appendChild(descEl);
     }
 
+    // ── Desktop grid ──
     const grid = document.createElement('div');
     grid.className = 'cat-grid';
-
     group.items.forEach(item => {
       const title = typeof item.title === 'object' ? item.title[lang] : item.title;
       const specs = Array.isArray(item.specs) ? item.specs : item.specs[lang];
 
       const card = document.createElement('div');
       card.className = 'cat-card';
-      card.innerHTML = `
-        <div class="cat-card-img">
-          <img src="${item.img}" alt="${title}" loading="lazy">
-          <div class="cat-card-lens">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
-              <circle cx="11" cy="11" r="8"/>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-              <line x1="11" y1="8" x2="11" y2="14"/>
-              <line x1="8" y1="11" x2="14" y2="11"/>
-            </svg>
-          </div>
-          <span class="cat-card-badge" style="background:${group.color}">${item.badge}</span>
-        </div>
-        <div class="cat-card-body">
-          <p class="cat-card-name">${title}</p>
-          <p class="cat-card-hint">${specs[0]}</p>
-        </div>
-      `;
-      card.addEventListener('click', () => openLB(item));
+
+      const imgWrap = buildCardSlider(item, group.color, title);
+      card.appendChild(imgWrap);
+
+      const body = document.createElement('div');
+      body.className = 'cat-card-body';
+      body.innerHTML = `<p class="cat-card-name">${title}</p><p class="cat-card-hint">${specs[0]}</p>`;
+      card.appendChild(body);
+
+      // Click lens or body → lightbox
+      imgWrap.querySelector('.cat-card-lens').addEventListener('click', () => openLB(item));
+      body.addEventListener('click', () => openLB(item));
+
       grid.appendChild(card);
     });
-
     sec.appendChild(grid);
+
+    // ── Mobile swipe viewer (hidden on desktop via CSS) ──
+    const swiper = buildSwipeViewer(group, group.items, lang);
+    sec.appendChild(swiper);
+
     container.appendChild(sec);
   });
 }
