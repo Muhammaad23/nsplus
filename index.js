@@ -25,10 +25,10 @@ const T={
    {id:'plity900',k:'tab_900',c:'#0f4fa8',dk:'desc_900',
     t:{ru:'Плиты A 900 серия',uz:'A 900 seriyali plitalar',en:'A 900 Series Cookers'},
     items:[
-     {img:'./images/1.png',b:'ЭПК-47ЖШ',t:{ru:'Плита 4-конфорочная + духовка ЭПК-47ЖШ',uz:'4 konforkalik pechli plita EPK-47ZhSh',en:'4-Burner + Oven EPK-47ZhSh'},d:{ru:'4 конфорки 900 серии + GN 2/1. Конвекция, пар. 65–270°C.',uz:"900-seriya, 4 konforka + GN 2/1 pech. Konveksiya, bug'.",en:'900-series 4 burners + GN 2/1 oven. Convection, steam.'},s:{ru:['Конфорки: 4 (900-серия)','Духовка: GN 2/1','Температура: 65–270°C','Конвекция и пар: есть','Ножки: регулируемые'],uz:['Konforka: 4 ta (900-seriya)','Pech: GN 2/1','Harorat: 65–270°C',"Konveksiya va bug': mavjud",'Oyoqlar: sozlanadi'],en:['Burners: 4 (900-series)','Oven: GN 2/1','Temp: 65–270°C','Convection & steam: yes','Feet: adjustable']}},
-     {img:'./images/2.png',b:'ЭПК-47Н',t:{ru:'Плита 4-конфорочная настольная ЭПК-47Н',uz:'4 konforkalik stol usti plita EPK-47N',en:'Countertop 4-Burner EPK-47N'},d:{ru:'Настольная 4-конфорочная 900 серии. 0,36 м².',uz:'900-seriya stol usti plita. 0,36 m².',en:'900-series countertop 4-burner. 0.36 m².'},s:{ru:['Тип: Настольный','Конфорки: 4 (900-серия)','Площадь: 0,36 м²','Ножки: регулируемые'],uz:['Turi: Stol usti','Konforka: 4 ta','Yuza: 0,36 m²','Oyoqlar: sozlanadi'],en:['Type: Countertop','Burners: 4 (900-series)','Area: 0.36 m²','Feet: adjustable']}},
-     {img:'./images/4.png',b:'ЭПК-47П',t:{ru:'Плита 4-конфорочная на подставке ЭПК-47П',uz:'4 konforkalik stendli plita EPK-47P',en:'4-Burner on Stand EPK-47P'},d:{ru:'4 конфорки, без духовки, нержавеющая полка.',uz:"Pechsiz 4 konforkalik plita. Ochiq pastki javon.",en:'4-burner, no oven. Open stainless lower shelf.'},s:{ru:['Конфорки: 4 (900-серия)','Площадь: 0,36 м²','Нижняя полка: нержавеющая','Ножки: регулируемые'],uz:['Konforka: 4 ta','Yuza: 0,36 m²','Pastki javon: zanglamaydigan','Oyoqlar: sozlanadi'],en:['Burners: 4 (900-series)','Area: 0.36 m²','Lower shelf: stainless','Feet: adjustable']}},
-     {img:'./images/3.png',b:'ЭП-6ЖП',t:{ru:'Плита 6-конфорочная + духовка ЭП-6ЖП',uz:'6 konforkalik pechli plita EP-6ZhP',en:'6-Burner + Oven EP-6ZhP'},d:{ru:'6 конфорок + духовка. 0,72 м². Боковые столешницы.',uz:'6 konforka + pech. 0,72 m². Yon stol yuzalari.',en:'6 burners + oven. 0.72 m². Side worktops.'},s:{ru:['Конфорки: 6','Площадь: 0,72 м²','Духовка: 65–270°C','Столешницы: 2 шт'],uz:['Konforka: 6 ta','Yuza: 0,72 m²','Pech: 65–270°C','Yon stollar: 2 ta'],en:['Burners: 6','Area: 0.72 m²','Oven: 65–270°C','Side worktops: 2']}},
+     {img:'./images/2.jpg',b:'ЭПК-47ЖШ',t:{ru:'Плита 4-конфорочная + духовка ЭПК-47ЖШ',uz:'4 konforkalik pechli plita EPK-47ZhSh',en:'4-Burner + Oven EPK-47ZhSh'},d:{ru:'4 конфорки 900 серии + GN 2/1. Конвекция, пар. 65–270°C.',uz:"900-seriya, 4 konforka + GN 2/1 pech. Konveksiya, bug'.",en:'900-series 4 burners + GN 2/1 oven. Convection, steam.'},s:{ru:['Конфорки: 4 (900-серия)','Духовка: GN 2/1','Температура: 65–270°C','Конвекция и пар: есть','Ножки: регулируемые'],uz:['Konforka: 4 ta (900-seriya)','Pech: GN 2/1','Harorat: 65–270°C',"Konveksiya va bug': mavjud",'Oyoqlar: sozlanadi'],en:['Burners: 4 (900-series)','Oven: GN 2/1','Temp: 65–270°C','Convection & steam: yes','Feet: adjustable']}},
+     {img:'./images/3.jpg',b:'ЭПК-47Н',t:{ru:'Плита 4-конфорочная настольная ЭПК-47Н',uz:'4 konforkalik stol usti plita EPK-47N',en:'Countertop 4-Burner EPK-47N'},d:{ru:'Настольная 4-конфорочная 900 серии. 0,36 м².',uz:'900-seriya stol usti plita. 0,36 m².',en:'900-series countertop 4-burner. 0.36 m².'},s:{ru:['Тип: Настольный','Конфорки: 4 (900-серия)','Площадь: 0,36 м²','Ножки: регулируемые'],uz:['Turi: Stol usti','Konforka: 4 ta','Yuza: 0,36 m²','Oyoqlar: sozlanadi'],en:['Type: Countertop','Burners: 4 (900-series)','Area: 0.36 m²','Feet: adjustable']}},
+     {img:'./images/4.jpg',b:'ЭПК-47П',t:{ru:'Плита 4-конфорочная на подставке ЭПК-47П',uz:'4 konforkalik stendli plita EPK-47P',en:'4-Burner on Stand EPK-47P'},d:{ru:'4 конфорки, без духовки, нержавеющая полка.',uz:"Pechsiz 4 konforkalik plita. Ochiq pastki javon.",en:'4-burner, no oven. Open stainless lower shelf.'},s:{ru:['Конфорки: 4 (900-серия)','Площадь: 0,36 м²','Нижняя полка: нержавеющая','Ножки: регулируемые'],uz:['Konforka: 4 ta','Yuza: 0,36 m²','Pastki javon: zanglamaydigan','Oyoqlar: sozlanadi'],en:['Burners: 4 (900-series)','Area: 0.36 m²','Lower shelf: stainless','Feet: adjustable']}},
+     {img:'./images/5.jpg',b:'ЭП-6ЖП',t:{ru:'Плита 6-конфорочная + духовка ЭП-6ЖП',uz:'6 konforkalik pechli plita EP-6ZhP',en:'6-Burner + Oven EP-6ZhP'},d:{ru:'6 конфорок + духовка. 0,72 м². Боковые столешницы.',uz:'6 konforka + pech. 0,72 m². Yon stol yuzalari.',en:'6 burners + oven. 0.72 m². Side worktops.'},s:{ru:['Конфорки: 6','Площадь: 0,72 м²','Духовка: 65–270°C','Столешницы: 2 шт'],uz:['Konforka: 6 ta','Yuza: 0,72 m²','Pech: 65–270°C','Yon stollar: 2 ta'],en:['Burners: 6','Area: 0.72 m²','Oven: 65–270°C','Side worktops: 2']}},
      {img:'./images/6.jpg',b:'ЭП-6П',t:{ru:'Плита 6-конфорочная на подставке ЭП-6П',uz:'6 konforkalik stendli plita EP-6P',en:'6-Burner on Stand EP-6P'},d:{ru:'6 конфорок без духовки. Боковые столешницы.',uz:"Pechsiz 6 konforkalik plita. Yon stol yuzalari.",en:'6-burner, no oven. Side worktops.'},s:{ru:['Конфорки: 6','Площадь: 0,72 м²','Столешницы: 2 шт','Нижняя полка: металл'],uz:['Konforka: 6 ta','Yuza: 0,72 m²','Yon stollar: 2 ta','Pastki javon: metall'],en:['Burners: 6','Area: 0.72 m²','Side worktops: 2','Lower shelf: metal']}},
      {img:'./images/3.jpg',b:'ЭП-6П',t:{ru:'Плита 6-конфорочная на подставке ЭП-6П',uz:'6 konforkalik stendli plita EP-6P',en:'6-Burner on Stand EP-6P'},d:{ru:'6 конфорок без духовки. Боковые столешницы.',uz:"Pechsiz 6 konforkalik plita.",en:'6-burner, no oven. Side worktops.'},s:{ru:['Конфорки: 6','Площадь: 0,72 м²','Столешницы: 2 шт','Нижняя полка: металл'],uz:['Konforka: 6 ta','Yuza: 0,72 m²','Yon stollar: 2 ta','Pastki javon: metall'],en:['Burners: 6','Area: 0.72 m²','Side worktops: 2','Lower shelf: metal']}}
     ]},
@@ -82,24 +82,70 @@ const T={
     ]}
   ];
   
-  // ══ LANG ══
-  let L='ru';
-  function setLang(l){
-    L=l;document.documentElement.lang=l;
-    const t=T[l];
-    document.querySelectorAll('[data-t]').forEach(el=>{const k=el.dataset.t;if(t[k]!=null)el.textContent=t[k];});
-    document.querySelectorAll('.lb').forEach(b=>b.classList.remove('on'));
-    const ab=document.querySelector(`.lb[onclick="setLang('${l}')"]`);if(ab)ab.classList.add('on');
-    document.title={ru:'NS Plus – Профессиональное оборудование',uz:'NS Plus – Professional uskunalar',en:'NS Plus – Professional Equipment'}[l];
-    document.querySelectorAll('.ctab[data-k]').forEach(b=>{const k=b.dataset.k;if(t[k])b.textContent=t[k];});
-    buildCat();
-  }
+  // ══ DARK MODE ══
+  const html=document.documentElement;
+  const dkBtn=document.getElementById('dkBtn');
+  const saved=localStorage.getItem('theme')||'light';
+  html.setAttribute('data-theme',saved);
+  dkBtn.onclick=()=>{
+    const nxt=html.getAttribute('data-theme')==='dark'?'light':'dark';
+    html.setAttribute('data-theme',nxt);
+    localStorage.setItem('theme',nxt);
+  };
   
   // ══ HAMBURGER ══
   const hbg=document.getElementById('hbg'),mm=document.getElementById('mm');
   hbg.onclick=()=>{hbg.classList.toggle('op');mm.classList.toggle('op');};
   mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hbg.classList.remove('op');mm.classList.remove('op');}));
-  document.addEventListener('click',e=>{if(!hbg.contains(e.target)&&!mm.contains(e.target)){hbg.classList.remove('op');mm.classList.remove('op');}});
+  document.addEventListener('click',e=>{if(!hbg.contains(e.target)&&!mm.contains(e.target)&&!dkBtn.contains(e.target)){hbg.classList.remove('op');mm.classList.remove('op');}});
+  
+  // ══ BACK TO TOP ══
+  const bttBtn=document.getElementById('btt');
+  window.addEventListener('scroll',()=>{bttBtn.classList.toggle('show',scrollY>400);},{ passive:true});
+  bttBtn.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
+  
+  // ══ SCROLL REVEAL ══
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}});
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  
+  // ══ COUNTER ANIMATION ══
+  function animCount(el,target,dur=1800){
+    let start=null;
+    const step=ts=>{
+      if(!start)start=ts;
+      const p=Math.min((ts-start)/dur,1);
+      const ease=1-Math.pow(1-p,3);
+      el.textContent=Math.floor(ease*target)+'+'
+      if(p<1)requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+  const cio=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        const t=parseInt(e.target.dataset.count);
+        animCount(e.target,t);
+        cio.unobserve(e.target);
+      }
+    });
+  },{threshold:.5});
+  document.querySelectorAll('.sn[data-count]').forEach(el=>cio.observe(el));
+  
+  // ══ FLOATING PARTICLES ══
+  (function(){
+    const c=document.getElementById('particles');
+    if(!c)return;
+    const colors=['rgba(26,86,219,.15)','rgba(99,102,241,.12)','rgba(59,130,246,.1)','rgba(139,92,246,.08)'];
+    for(let i=0;i<14;i++){
+      const d=document.createElement('div');
+      d.className='p';
+      const sz=Math.random()*60+20;
+      d.style.cssText=`width:${sz}px;height:${sz}px;left:${Math.random()*100}%;top:${Math.random()*100}%;background:${colors[i%colors.length]};--dur:${6+Math.random()*8}s;animation-delay:-${Math.random()*8}s`;
+      c.appendChild(d);
+    }
+  })();
   
   // ══ LIGHTBOX ══
   const lbEl=document.getElementById('lb');
@@ -126,57 +172,64 @@ const T={
   function mkCard(item,g){
     const ti=typeof item.t==='object'?item.t[L]:item.t;
     const sp=Array.isArray(item.s)?item.s:item.s[L];
-    const d=document.createElement('div');d.className='cc';
+    const d=document.createElement('div');d.className='cc reveal scale';
     d.innerHTML=`<div class="cimg"><img src="${item.img}" alt="${ti}" loading="lazy">${LENS}<span class="cbadge" style="background:${g.c}">${item.b}</span></div><div class="cbody"><p class="cname">${ti}</p><p class="chint">${sp[0]}</p></div>`;
-    d.onclick=()=>openLB(item);return d;
+    d.onclick=()=>openLB(item);
+    setTimeout(()=>io.observe(d),50);
+    return d;
   }
   
   // ══ SLIDER ══
-  const SVG_PREV=`<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>`;
-  const SVG_NEXT=`<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>`;
+  const SVG_P=`<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>`;
+  const SVG_N=`<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>`;
   function mkSlider(sec,g){
     const wrap=document.createElement('div');wrap.className='cswrap';
-    const prev=document.createElement('button');prev.className='sb sbp';prev.innerHTML=SVG_PREV;prev.type='button';
-    const next=document.createElement('button');next.className='sb sbn';next.innerHTML=SVG_NEXT;next.type='button';
+    const prev=document.createElement('button');prev.className='sb sbp';prev.innerHTML=SVG_P;prev.type='button';
+    const next=document.createElement('button');next.className='sb sbn';next.innerHTML=SVG_N;next.type='button';
     const vp=document.createElement('div');vp.className='csvp';
     const tr=document.createElement('div');tr.className='cstr';
     g.items.forEach(item=>tr.appendChild(mkCard(item,g)));
     vp.appendChild(tr);wrap.appendChild(prev);wrap.appendChild(vp);wrap.appendChild(next);
     const dots=document.createElement('div');dots.className='sdots';
     sec.appendChild(wrap);sec.appendChild(dots);
-  
     let cur=0,GAP=14;
-    // visible cards based on viewport width
     function vis(){const w=wrap.getBoundingClientRect().width||wrap.offsetWidth;return w<520?1:w<860?3:4;}
-    // card width = (viewport - gaps) / visible
     function cw(){const w=wrap.getBoundingClientRect().width||wrap.offsetWidth;const v=vis();return(w-(v-1)*GAP)/v;}
     function tot(){return Math.max(1,g.items.length-vis()+1);}
     function mkDots(){
-      dots.innerHTML='';
-      const n=tot();if(n<=1){dots.style.display='none';return;}dots.style.display='';
+      dots.innerHTML='';const n=tot();
+      if(n<=1){dots.style.display='none';return;}dots.style.display='';
       for(let i=0;i<n;i++){const d=document.createElement('button');d.type='button';d.className='sdot'+(i===cur?' on':'');d.onclick=()=>go(i);dots.appendChild(d);}
     }
     function go(i){
       cur=Math.max(0,Math.min(i,tot()-1));
-      // set each card width explicitly so transform works perfectly
       const w=cw();
       tr.querySelectorAll('.cc').forEach(c=>{c.style.flex=`0 0 ${w}px`;c.style.maxWidth=`${w}px`;});
       tr.style.transform=`translateX(-${cur*(w+GAP)}px)`;
-      prev.classList.toggle('off',cur===0);
-      next.classList.toggle('off',cur>=tot()-1);
+      prev.classList.toggle('off',cur===0);next.classList.toggle('off',cur>=tot()-1);
       dots.querySelectorAll('.sdot').forEach((d,j)=>d.classList.toggle('on',j===cur));
     }
-    prev.onclick=()=>go(cur-1);
-    next.onclick=()=>go(cur+1);
-    // touch swipe
+    prev.onclick=()=>go(cur-1);next.onclick=()=>go(cur+1);
     let tx=0;
     vp.addEventListener('touchstart',e=>{tx=e.touches[0].clientX;},{passive:true});
     vp.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>40){dx<0?go(cur+1):go(cur-1);}},{passive:true});
-    // resize
-    const ro=new ResizeObserver(()=>{const nc=Math.min(cur,tot()-1);mkDots();go(nc);});
+    const ro=new ResizeObserver(()=>{mkDots();go(Math.min(cur,tot()-1));});
     ro.observe(wrap);
-    // init after layout
     requestAnimationFrame(()=>requestAnimationFrame(()=>{mkDots();go(0);}));
+  }
+  
+  
+  // ══ LANG ══
+  let L='ru';
+  function setLang(l){
+    L=l;document.documentElement.lang=l;
+    const t=T[l];
+    document.querySelectorAll('[data-t]').forEach(el=>{const k=el.dataset.t;if(t[k]!=null)el.textContent=t[k];});
+    document.querySelectorAll('.lb').forEach(b=>b.classList.remove('on'));
+    const ab=document.querySelector(`.lb[onclick="setLang('${l}')"]`);if(ab)ab.classList.add('on');
+    document.title={ru:'NS Plus – Профессиональное оборудование',uz:'NS Plus – Professional uskunalar',en:'NS Plus – Professional Equipment'}[l];
+    document.querySelectorAll('.ctab[data-k]').forEach(b=>{const k=b.dataset.k;if(t[k])b.textContent=t[k];});
+    buildCat();
   }
   
   // ══ TABS ══
@@ -202,8 +255,9 @@ const T={
     con.innerHTML='';
     CAT.forEach(g=>{
       const sec=document.createElement('div');sec.className='csec';sec.id=g.id;
-      sec.innerHTML=`<div class="csh"><span class="csd" style="background:${g.c}"></span><h3 class="cst" style="color:${g.c}">${g.t[L]}</h3></div>`;
-      if(g.dk&&T[L][g.dk]){const p=document.createElement('p');p.className='csdesc';p.textContent=T[L][g.dk];sec.appendChild(p);}
+      sec.innerHTML=`<div class="csh reveal"><span class="csd" style="background:${g.c}"></span><h3 class="cst" style="color:${g.c}">${g.t[L]}</h3></div>`;
+      if(g.dk&&T[L][g.dk]){const p=document.createElement('p');p.className='csdesc reveal';p.textContent=T[L][g.dk];sec.appendChild(p);setTimeout(()=>io.observe(p),50);}
+      sec.querySelectorAll('.reveal').forEach(el=>setTimeout(()=>io.observe(el),50));
       if(SLD.has(g.id)){mkSlider(sec,g);}
       else{const gr=document.createElement('div');gr.className='cgrid';g.items.forEach(item=>gr.appendChild(mkCard(item,g)));sec.appendChild(gr);}
       con.appendChild(sec);
