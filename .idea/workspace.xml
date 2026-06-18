@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="37d33e21-8940-4d66-948d-fc57df9aab47" name="Changes" comment="" />
+    <list default="true" id="37d33e21-8940-4d66-948d-fc57df9aab47" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/images/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/1a.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/1a.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/21.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/21.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/22.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/22.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/25.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/25.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/2a.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/2a.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/3a.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/3a.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/5a.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/5a.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ChatGPT Image 13 июн. 2026 г., 13_22_35.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ChatGPT Image 13 июн. 2026 г., 13_22_35.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/imagee.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/imagee.jpg" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="3FH8g45m4v3H9EcvHiYdBDqMlkT" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -18,7 +36,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
