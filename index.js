@@ -105,10 +105,8 @@ const T={
   bttBtn.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
   
   // ══ SCROLL REVEAL ══
-  const io=new IntersectionObserver(entries=>{
-    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}});
-  },{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  // reveal disabled - elements always visible
+  const io={observe:()=>{}};
   
   // ══ COUNTER ANIMATION ══
   function animCount(el,target,dur=1800){
@@ -168,7 +166,7 @@ const T={
   function closeLB(){lbEl.classList.remove('on');document.body.style.overflow='';}
   
   // ══ CARD ══
-  const LENS=`<div class="clens"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>`;
+  const LENS=``;
   function mkCard(item,g){
     const ti=typeof item.t==='object'?item.t[L]:item.t;
     const sp=Array.isArray(item.s)?item.s:item.s[L];
